@@ -1,0 +1,7 @@
+{
+  "name": "norman-pt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
