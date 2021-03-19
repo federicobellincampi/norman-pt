@@ -1,0 +1,20 @@
+<ion-button
+  [ngStyle]="{ 
+    'border-color': (selected ? borderColor : ''), 
+    'opacity': (selected ? '1' : '0.3')
+  }"
+  (click)="!selected ? $selectEvent.emit() : null"
+>
+  <i 
+    *ngIf="text === 'Maschio'"
+     class="fa fa-mars"
+     [ngStyle]="{'color': borderColor}"
+  ></i>
+  <i 
+    *ngIf="text === 'Femmina'"
+    class="fa fa-venus"
+    [ngStyle]="{'color': borderColor}"
+    ></i>
+
+  {{text}}
+</ion-button>

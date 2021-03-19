@@ -1,0 +1,69 @@
+<ion-content>
+
+    <ion-grid>
+
+        <ion-row style="text-align: center; margin-top: 8vh;">
+      
+            <!-- <p #p1 style="font-weight: bold; font-size: 2vh;">
+                Questa informazioni ci permette di caricare le schede più adatte a te.
+            </p> -->
+            <p #p2 style="font-size: 1.8vh; margin: 11px auto 0">
+                Segui questi semplici passaggi per ottenere il piano di fetness più adatatto a te.
+            </p>
+            <h1 #h2 style="font-weight: 600; margin-top: 5vh;">
+                Maschio o Femmina ?
+            </h1>
+
+        </ion-row>
+
+        <ion-row style="text-align: center; display: flex; margin-top: 5vh; align-items: center;">
+
+            <ion-col>
+                <nf-button-select 
+                text="Femmina"
+                borderColor="#ff78cb"
+                [selected]="getDonnaSelected$ | async"
+                ($selectEvent)="womanSelected()"
+                ></nf-button-select>
+
+                <nf-button-select 
+                    text="Maschio"
+                    borderColor="#45b6fe"
+                    [selected]="getUomoSelected$ | async"
+                    ($selectEvent)="manSelected()"
+                ></nf-button-select>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+
+            <ion-col #donna class="col-woman">
+                <nf-gender-select
+                    title="Donna"
+                    colorTitle="#ff78cb"
+                    [selected]="getDonnaSelected$ | async"
+                    ($selectEvent)="womanSelected()"
+                >
+                </nf-gender-select>
+            </ion-col>
+
+            <ion-col #uomo class="col-man">
+                <nf-gender-select
+                    img="andrea-uomo.png"
+                    title="Uomo"
+                    colorTitle="#45b6fe"
+                    [selected]="getUomoSelected$ | async"
+                    ($selectEvent)="manSelected()"
+                >
+                </nf-gender-select>
+            </ion-col>
+
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>
+
+<nf-footer text="1/2" [disable]="footerDisable$ | async" ($goNext)="goToStep2()" ($goBack)="goInitialStep()">
+</nf-footer>

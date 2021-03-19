@@ -1,0 +1,37 @@
+ion-content {
+    --background: black;
+    --padding-end: 0;
+    --padding-start: 0;
+}
+
+ion-avatar {
+    height: 100px;
+    width: 100px;
+}
+
+ion-card {
+    border: 2px solid grey;
+}
+
+ion-item {
+    --background: #474747;
+    --color: white;
+    --border-style: 0;
+    padding: 16px;
+}
+
+ion-label {
+    font-family: 'Lato';
+    font-weight: bold;
+}
+
+ion-select::part(text) {
+    position: absolute;
+    right: 35px;
+}
+
+ion-button {
+    padding: 0 16px;
+    margin-bottom: 10px;
+    --background: green;
+}

@@ -1,0 +1,92 @@
+<ion-content>
+    <ion-grid>
+
+        <ion-row style="text-align: center; margin-top: 8vh;">
+            <h1 #title style="font-weight: 800;">
+                Seleziona il tuo obiettivo
+            </h1>
+            <p #subTitle style="font-weight: bold; font-size: 2vh;">
+                Questa informazione ci permette di caricare le schede più adatte a te.
+            </p>
+            <p #label style="font-size: 1.8vh; margin: 11px auto 0">
+                *potrai sempre cambiare la tua scelta nella sezione profilo.
+            </p>
+        </ion-row>
+
+        <ion-row #row1> 
+
+            <div *ngIf="getGenderProfile$ | async as gender">
+                <nf-card 
+                    *ngIf="gender === 'uomo'; else elseBlock1"
+                    img="massa-muscolare.jpg"
+                    title="Massa muscolare"
+                    colorTitle="#45b6fe"
+                    [selected]="getMuscleMassSelected$ | async"
+                    ($selectEvent)="muscleMassSelected()"
+                >
+                </nf-card>
+            </div>
+
+            <ng-template #elseBlock1>
+                <nf-card 
+                    img="tonificazione.jpg"
+                    title="Tonificazione"
+                    colorTitle="#ff78cb"
+                    [selected]="getToningSelected$ | async"
+                    ($selectEvent)="toningSelected()"
+                >
+                </nf-card>
+            </ng-template>
+     
+        </ion-row>
+
+        <ion-row #row2>
+
+            <div *ngIf="getGenderProfile$ | async as gender">
+                <nf-card 
+                    *ngIf="gender === 'uomo'; else elseBlock2"
+                    img="perdita-peso.jpg"
+                    title="Perdita di peso"
+                    colorTitle="#45b6fe"
+                    [selected]="getLoseWeightSelected$ | async"
+                    ($selectEvent)="loseWeightSelected()"
+                >
+                </nf-card>
+            </div>
+
+            <ng-template #elseBlock2>
+                <nf-card 
+                    img="perdita-peso.jpg"
+                    title="Perdita di peso"
+                    colorTitle="#ff78cb"
+                    [selected]="getLoseWeightSelected$ | async"
+                    ($selectEvent)="loseWeightSelected()"
+                >
+                </nf-card>
+            </ng-template>
+            <!-- <div>
+                <nf-card 
+                    img="perdita-peso.jpg"
+                    title="Perdita di peso"
+                    colorTitle="#45b6fe"
+                    [selected]="getLoseWeightSelected$ | async"
+                    ($selectEvent)="loseWeightSelected()"
+                >
+                </nf-card>
+            </div> -->
+
+
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>
+
+<nf-footer 
+    text="2/2" 
+    [disable]="footerDisable$ | async" 
+    ($goNext)="goToTrainers()" 
+    ($goBack)="goToStep1()">
+</nf-footer>
+
+

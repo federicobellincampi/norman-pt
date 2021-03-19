@@ -1,0 +1,11 @@
+<nf-header title="Allenamenti"></nf-header>
+
+<ion-content>
+    
+    <!-- <nf-exercise></nf-exercise>  -->
+    <nf-select-card *ngFor="let cards of getCardsTrainer$ | async | keyvalue"
+        [text]="cards.value"
+        ($cardSelected)="navToCardTrainer($event)"
+    >
+    </nf-select-card>
+</ion-content>

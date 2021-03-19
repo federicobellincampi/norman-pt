@@ -1,0 +1,24 @@
+
+  h1 {
+    margin-top: 0;
+    margin: auto;
+    font-weight: bold;
+    font-size: 3vh;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+.col-woman {
+  position: absolute;
+  left: -60%;
+  top: 43vh;
+  border-radius: 10%;
+}
+
+.col-man {
+  position: absolute;
+  right: -70%;
+  top: 39vh;
+}
