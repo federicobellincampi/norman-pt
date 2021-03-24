@@ -5,19 +5,11 @@ img {
     height: 52vh;
     border-top-left-radius: 35%;
     transform: scale(0.9);
-
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
   }
 
   .img-selected {
     transform: scale(1.05);
-  }
-
-  h1 {
-    margin-top: 0;
-    margin: auto;
-    font-weight: bold;
-    font-size: 3vh;
   }
 
   .container-gender {

@@ -1,0 +1,41 @@
+i {
+    background:-moz-linear-gradient(right, #ff99cc 50%, #45b6fe 50%); 
+    background: -webkit-linear-gradient(right, #ff99cc 50%,#45b6fe 50%); 
+    background: linear-gradient(to right, #ff99cc 50%,#45b6fe 50%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
+    font-size: 3vh;
+    margin-right: 1vh;
+    display: inline;
+}
+
+ion-item {
+    --background: #474747;
+    --color: white;
+    --border-style: 0;
+    margin: 16px;
+    border-radius: 10px;
+}
+
+ion-label {
+    font-family: 'Lato' !important;
+    font-weight: 600;
+}
+
+ion-select::part(text) {
+    position: absolute;
+    right: 4vh;
+    font-family: cursive;    
+    font-weight: 400;
+}
+
+.custom-interface-man {
+    color: #45b6fe;
+}
+
+.custom-interface-woman {
+    color: #ff99cc;
+}
+

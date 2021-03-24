@@ -1,30 +1,38 @@
 <nf-header title="Profilo"></nf-header>
 
-<ion-content fullscreen class="ion-padding" *ngIf="getProfile$ | async as profile">
-  <ion-avatar style="margin: auto;">
-    <img src="./assets/img/profilo.png">
-  </ion-avatar>
+<ion-content mode="ios" fullscreen class="ion-padding" *ngIf="getProfile$ | async as profile">
+  <div>
+    <img src="./assets/img/logo-colorato.JPG">
+  </div>   
 
-    <ion-item>
-      <ion-label>Genere:</ion-label>
-      <ion-select [value]="profile.gender" interface="action-sheet" (ionChange)="changeGender($event.detail.value)">
-        <ion-select-option value="uomo">Uomo</ion-select-option>
-        <ion-select-option value="donna">Donna</ion-select-option>
-      </ion-select>
-    </ion-item>
+  <nf-select-component
+    title="Genere"
+    [gender]="profile.gender"
+    [valueSelected]="profile.gender"
+    [valuesOption]="[ 'Uomo', 'Donna' ]"
+    ($changeEvent)="changeGender($event)"
+  >
+  </nf-select-component>
 
-    <ion-item style="padding-top: 0;">
-      <ion-label>Obiettivo:</ion-label>
-      <ion-select [value]="profile.goalTraining" interface="action-sheet" (ionChange)="changeGoalTraining($event.detail.value)">
-        <ion-select-option value="massa muscolare">Massa muscolare</ion-select-option>
-        <ion-select-option value="perdita di peso">Perdita di peso</ion-select-option>
-        <ion-select-option value="rimanere in forma">Rimanere in forma</ion-select-option>
-      </ion-select>
-    </ion-item>
 
-    <ion-button [disabled]="getButtonDisable$ | async">
-      Salva modifiche
-    </ion-button>
+  <nf-select-component
+    title="Obiettivo"
+    [gender]="profile.gender"
+    [valueSelected]="profile.goalTraining"
+    [valuesOption]="
+      profile.gender === 'uomo'
+        ? [ 'Massa muscolare', 'Perdere peso' ]
+        : [ 'Tonificarsi', 'Perdere peso' ]
+    "
+    ($changeEvent)="profile.goalTraining !== $event ? changeGoalTraining($event) : null"
+  >
+  </nf-select-component>
 
+  <ion-input></ion-input>
+  
+  <nf-contacts-component></nf-contacts-component>
+
+  
 </ion-content>
+
 

@@ -6,6 +6,8 @@ import { IonicModule } from '@ionic/angular';
 import { SharedModule } from "src/app/shared/shared.module";
 import { StoreModule } from "@ngrx/store";
 import { reducer as saveChangesReducer } from "./store/reducers/save-changes.reducer";
+import { ContactsComponentComponent } from "./components/contacts-component/contacts-component.component";
+import { SelectComponentComponent } from "./components/select-component/select-component.component";
 
 export const routes: Routes = [
   {
@@ -15,7 +17,11 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ProfileComponent],
+  declarations: [
+    ProfileComponent,
+    ContactsComponentComponent,
+    SelectComponentComponent
+  ],
   imports: [
     CommonModule, 
     IonicModule,

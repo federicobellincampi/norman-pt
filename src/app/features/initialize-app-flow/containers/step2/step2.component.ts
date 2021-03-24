@@ -23,8 +23,8 @@ export class Step2Component implements OnInit{
   public getToningSelected$: Observable<boolean> = this.store.pipe(select(getToningSelected));
   public getLoseWeightSelected$: Observable<boolean> = this.store.pipe(select(getLoseWeightSelected));
   
-  @ViewChild('title', { read: ElementRef, static: true }) title: ElementRef;
-  @ViewChild('subTitle', { read: ElementRef, static: true }) subTitle: ElementRef;
+  @ViewChild('h1', { read: ElementRef, static: true }) h1: ElementRef;
+  @ViewChild('p', { read: ElementRef, static: true }) p: ElementRef;
   @ViewChild('label', { read: ElementRef, static: true }) label: ElementRef;
   @ViewChild('row1', { read: ElementRef, static: true }) row1: ElementRef;
   @ViewChild('row2', { read: ElementRef, static: true }) row2: ElementRef;
@@ -42,9 +42,9 @@ export class Step2Component implements OnInit{
     this.store.dispatch(GoalTrainingActions.checkGoalTrainingSelected())
     this.transformAnimationService.transformAnimationElements(
       [
-        this.title.nativeElement,
-        this.subTitle.nativeElement,
-        this.label.nativeElement,
+        this.h1.nativeElement,
+        this.p.nativeElement,
+        // this.label.nativeElement,
         this.row1.nativeElement,
         this.row2.nativeElement
       ],

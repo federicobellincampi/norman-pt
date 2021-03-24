@@ -19,7 +19,7 @@ import { enterAnimation } from './animations/nav-animation';
   imports: [
     BrowserModule, 
     IonicModule.forRoot({
-      navAnimation: enterAnimation
+      navAnimation: enterAnimation,
     }), 
     AppRoutingModule,
     CoreModule

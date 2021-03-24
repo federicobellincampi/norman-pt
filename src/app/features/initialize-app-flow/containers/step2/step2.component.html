@@ -2,14 +2,11 @@
     <ion-grid>
 
         <ion-row style="text-align: center; margin-top: 8vh;">
-            <h1 #title style="font-weight: 800;">
+            <h1 #h1>
                 Seleziona il tuo obiettivo
             </h1>
-            <p #subTitle style="font-weight: bold; font-size: 2vh;">
-                Questa informazione ci permette di caricare le schede più adatte a te.
-            </p>
-            <p #label style="font-size: 1.8vh; margin: 11px auto 0">
-                *potrai sempre cambiare la tua scelta nella sezione profilo.
+            <p #p>
+                Questa informazione ci permette di capire quali risultati vuoi ottenere
             </p>
         </ion-row>
 
@@ -19,7 +16,7 @@
                 <nf-card 
                     *ngIf="gender === 'uomo'; else elseBlock1"
                     img="massa-muscolare.jpg"
-                    title="Massa muscolare"
+                    title="Costruire massa muscolare"
                     colorTitle="#45b6fe"
                     [selected]="getMuscleMassSelected$ | async"
                     ($selectEvent)="muscleMassSelected()"
@@ -29,8 +26,8 @@
 
             <ng-template #elseBlock1>
                 <nf-card 
-                    img="tonificazione.jpg"
-                    title="Tonificazione"
+                    img="tonificarsi.jpg"
+                    title="Tonificarsi"
                     colorTitle="#ff78cb"
                     [selected]="getToningSelected$ | async"
                     ($selectEvent)="toningSelected()"
@@ -46,7 +43,7 @@
                 <nf-card 
                     *ngIf="gender === 'uomo'; else elseBlock2"
                     img="perdita-peso.jpg"
-                    title="Perdita di peso"
+                    title="Perdere peso"
                     colorTitle="#45b6fe"
                     [selected]="getLoseWeightSelected$ | async"
                     ($selectEvent)="loseWeightSelected()"
@@ -57,7 +54,7 @@
             <ng-template #elseBlock2>
                 <nf-card 
                     img="perdita-peso.jpg"
-                    title="Perdita di peso"
+                    title="Perdere peso"
                     colorTitle="#ff78cb"
                     [selected]="getLoseWeightSelected$ | async"
                     ($selectEvent)="loseWeightSelected()"
@@ -67,7 +64,7 @@
             <!-- <div>
                 <nf-card 
                     img="perdita-peso.jpg"
-                    title="Perdita di peso"
+                    title="perdere peso"
                     colorTitle="#45b6fe"
                     [selected]="getLoseWeightSelected$ | async"
                     ($selectEvent)="loseWeightSelected()"

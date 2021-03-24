@@ -1,0 +1,16 @@
+<ion-item>
+  <i *ngIf="title === 'Genere'" class="fa fa-venus-mars"></i> 
+  <i *ngIf="title === 'Obiettivo'" class="fas fa-dumbbell"></i>     
+  <ion-label>{{title}}</ion-label>
+  <ion-select 
+    [ngClass]="
+      {
+        'custom-interface-man': gender === 'uomo',
+        'custom-interface-woman': gender === 'donna'
+      }" 
+      [value]="valueSelected" 
+      (ionChange)="$changeEvent.emit($event.detail.value)"
+  >
+    <ion-select-option *ngFor="let val of valuesOption" [value]="val.toLowerCase()">{{val}}</ion-select-option>
+  </ion-select>
+</ion-item>

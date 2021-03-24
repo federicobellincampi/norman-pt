@@ -3,7 +3,7 @@ import * as ProfileActions from './profile.actions';
 
 export interface ProfileState {
     gender: 'uomo' | 'donna';
-    goalTraining: 'massa muscolare' | 'perdita di peso' | 'tonificazione';
+    goalTraining: 'massa muscolare' | 'perdere peso' | 'tonificarsi';
 }
 
 export const initialState: ProfileState = {
@@ -15,7 +15,7 @@ const clientReducer = createReducer(
     initialState,
     on(ProfileActions.saveProfileGender, (state, action) => ({ 
         ...state, 
-        gender: action.gender    
+        gender: action.gender,    
     })),
     on(ProfileActions.saveProfileGoalTraining , (state, action) => ({ ...state, goalTraining: action.goalTraining })),
     on(ProfileActions.loadProfile , (state, action) => ({ ...state, gender: action.user.gender, goalTraining: action.user.goalTraining })),

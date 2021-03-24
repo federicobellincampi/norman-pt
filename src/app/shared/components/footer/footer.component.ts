@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'nf-footer',
   template: `
-    <ion-footer>
+    <ion-footer mode="ios">
       <ion-toolbar>
         <ion-title>
           {{text}}
@@ -24,6 +24,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styles: [`
     ion-toolbar {
       --border-width: 0 !important;
+      --background: #f9f9f9;
       font-family: 'Lato';
     }
     ion-button {

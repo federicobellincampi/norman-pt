@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { AppState } from 'src/app/core/core.module';
 import { getGenderProfile, getGoalTrainingProfile, getProfile } from '../../../../core/profile/store/profile.selectors';
@@ -18,49 +18,33 @@ export class ProfileComponent {
 
   public getProfile$: Observable<{
     gender: 'uomo' | 'donna';
-    goalTraining: 'massa muscolare' | 'perdita di peso' | 'tonificazione';
+    goalTraining: 'massa muscolare' | 'perdere peso' | 'tonificarsi';
   }> = this.store.pipe(select(getProfile));
 
-  public getGender$: Observable<
+  public getGenderProfile$: Observable<
   'uomo' | 'donna'
   > = this.store.pipe(select(getGenderProfile));
 
-  public getGoalTraining$: Observable<
-    'massa muscolare' | 'perdita di peso' | 'tonificazione'
+  public getGoalTrainingProfile$: Observable<
+    'massa muscolare' | 'perdere peso' | 'tonificarsi'
     > = this.store.pipe(select(getGoalTrainingProfile));
 
   public getButtonDisable$: Observable<string> = this.store.pipe(select(getButtonDisable))
-
+  options = {
+    cssClass: 'my-custom-interface'
+  };
   constructor(private store: Store<AppState>) { }
 
   public ionViewWillEnter(): void { 
-    this.store.dispatch(SaveChangesActions.buttonDisable())
     
   }
 
   public changeGender(gender: 'uomo' | 'donna'): void {
-    this.getGender$.subscribe((gender: 'uomo' | 'donna') => {
-      console.log(gender);
-    })
-    // this.store.dispatch(SaveChangesActions.buttonActive())
-    // this.store.dispatch(ProfileActions.saveProfileGender({ gender }))
+    this.store.dispatch(ProfileActions.saveProfileGender({ gender }))
   }
 
-  public changeGoalTraining(goalTraining: 'massa muscolare' | 'perdita di peso' | 'tonificazione'): void {
-    //console.log('goal training')
-    //this.checkStatusButton();
-    // this.store.dispatch(ProfileActions.saveProfileGoalTraining({ goalTraining }))
+  public changeGoalTraining(goalTraining: 'massa muscolare' | 'perdere peso' | 'tonificarsi'): void {
+    this.store.dispatch(ProfileActions.saveProfileGoalTraining({ goalTraining }))
   }
 
-  public saveChanges(): void {
-    this.store.dispatch(ProfileActions.saveProfile())
-    this.store.dispatch(SaveChangesActions.buttonDisable())
-  }
-
-  public checkStatusButton(): void {
-    this.getButtonDisable$.subscribe((disable: string) => {
-      disable === "true" ? this.store.dispatch(SaveChangesActions.buttonActive()) : null;
-    })
-   
-  }
 }

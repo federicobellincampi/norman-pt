@@ -16,11 +16,11 @@ import * as GenderActions from '../../store/actions/gender.actions';
 })
 export class Step1Component implements OnInit{
 
-  @ViewChild("h2", { read: ElementRef, static: true }) h2: ElementRef;
-  @ViewChild("p1", { read: ElementRef, static: true }) p1: ElementRef;
-  @ViewChild("p2", { read: ElementRef, static: true }) p2: ElementRef;
-  @ViewChild("donna", { read: ElementRef, static: true }) donna: ElementRef;
-  @ViewChild("uomo", { read: ElementRef, static: true }) uomo: ElementRef;
+  @ViewChild("p", { read: ElementRef, static: true }) p: ElementRef;
+  @ViewChild("h1", { read: ElementRef, static: true }) h1: ElementRef;
+  @ViewChild("woman", { read: ElementRef, static: true }) woman: ElementRef;
+  @ViewChild("man", { read: ElementRef, static: true }) man: ElementRef;
+  @ViewChild("manImg", { read: ElementRef, static: true }) manImg: ElementRef;
 
   public getUomoSelected$: Observable<boolean> = this.store.pipe(select(getManSelected))
   public getDonnaSelected$: Observable<boolean> = this.store.pipe(select(getWomanSelected))
@@ -36,17 +36,17 @@ export class Step1Component implements OnInit{
   }
 
   public ionViewWillEnter(): void {
-    //this.store.dispatch(GenderActions.checkGenderSelected());
-    // this.transformAnimationService.transformAnimationElements(
-    //   [
-    //     this.h2.nativeElement,
-    //     this.p1.nativeElement,
-    //     this.p2.nativeElement,
-    //     this.donna.nativeElement,
-    //     this.uomo.nativeElement,
-    //   ],
-    //   200
-    // );
+    this.store.dispatch(GenderActions.checkGenderSelected());
+    this.transformAnimationService.transformAnimationElements(
+      [
+        this.p.nativeElement,
+        this.h1.nativeElement,
+        this.woman.nativeElement,
+        this.man.nativeElement,
+        this.manImg.nativeElement
+      ],
+      200
+    );
   }
 
   public manSelected(): void {

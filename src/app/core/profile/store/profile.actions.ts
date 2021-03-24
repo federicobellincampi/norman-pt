@@ -13,7 +13,7 @@ export const saveProfileGender = createAction(
 
 export const saveProfileGoalTraining = createAction(
     '[Profile] save goal training',
-    props<{ goalTraining: 'massa muscolare' | 'perdita di peso' | 'tonificazione' }>()
+    props<{ goalTraining: 'massa muscolare' | 'perdere peso' | 'tonificarsi' }>()
 )
 
 export const saveProfile = createAction(

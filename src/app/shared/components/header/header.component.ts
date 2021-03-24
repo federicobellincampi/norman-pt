@@ -6,7 +6,7 @@ import * as RouterActions from '../../../core/router/store/router.actions';
 @Component({
   selector: "nf-header",
   template: `
-    <ion-header class="ion-no-border">
+    <ion-header class="ion-no-border" mode="ios">
       <ion-toolbar>
         <ion-buttons *ngIf="showBackButton" slot="start" (click)="backButtonHandler()">
           <ion-icon name="arrow-back-sharp"></ion-icon>

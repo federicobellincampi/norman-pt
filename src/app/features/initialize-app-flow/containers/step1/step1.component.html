@@ -4,31 +4,29 @@
 
         <ion-row style="text-align: center; margin-top: 8vh;">
       
-            <!-- <p #p1 style="font-weight: bold; font-size: 2vh;">
-                Questa informazioni ci permette di caricare le schede più adatte a te.
-            </p> -->
-            <p #p2 style="font-size: 1.8vh; margin: 11px auto 0">
-                Segui questi semplici passaggi per ottenere il piano di fetness più adatatto a te.
+            <p #p>
+                Segui questi semplici passaggi per ottenere il piano di fitness più adatatto a te.
             </p>
-            <h1 #h2 style="font-weight: 600; margin-top: 5vh;">
-                Maschio o Femmina ?
+            <h1 #h1>
+                Donna o Uomo ?
             </h1>
 
         </ion-row>
 
         <ion-row style="text-align: center; display: flex; margin-top: 5vh; align-items: center;">
 
-            <ion-col>
-                <nf-button-select 
-                text="Femmina"
-                borderColor="#ff78cb"
-                [selected]="getDonnaSelected$ | async"
-                ($selectEvent)="womanSelected()"
+            <ion-col #woman>
+                <nf-button-select #woman
+                    text="Donna"
+                    color="#ff99cc"
+                    [selected]="getDonnaSelected$ | async"
+                    ($selectEvent)="womanSelected()"
                 ></nf-button-select>
-
-                <nf-button-select 
-                    text="Maschio"
-                    borderColor="#45b6fe"
+            </ion-col>
+            <ion-col #man>
+                <nf-button-select #man
+                    text="Uomo"
+                    color="#45b6fe"
                     [selected]="getUomoSelected$ | async"
                     ($selectEvent)="manSelected()"
                 ></nf-button-select>
@@ -38,7 +36,7 @@
 
         <ion-row>
 
-            <ion-col #donna class="col-woman">
+            <!-- <ion-col #donna class="col-woman">
                 <nf-gender-select
                     title="Donna"
                     colorTitle="#ff78cb"
@@ -46,13 +44,11 @@
                     ($selectEvent)="womanSelected()"
                 >
                 </nf-gender-select>
-            </ion-col>
+            </ion-col> -->
 
-            <ion-col #uomo class="col-man">
+            <ion-col #manImg class="col-man">
                 <nf-gender-select
                     img="andrea-uomo.png"
-                    title="Uomo"
-                    colorTitle="#45b6fe"
                     [selected]="getUomoSelected$ | async"
                     ($selectEvent)="manSelected()"
                 >
