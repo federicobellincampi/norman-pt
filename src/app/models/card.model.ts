@@ -1,6 +1,5 @@
 export interface CardModel {
-    id: number;
-    text: string;
-    nameImg: string;
-    selected: boolean;
+    nome: string;
+    ripetizioni: number | string;
+    urlVideo: string;
 }

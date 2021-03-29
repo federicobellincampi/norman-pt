@@ -1,23 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { AngularFireStorage } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
-import { CardTraining } from '../../../../../models/card-training.model';
-
+import { MuscleGroupModel } from '../../../../../models/muscle-group';
 @Injectable()
 export class GetCardsTrainingService {
 
-  constructor(private angularFireDatabase: AngularFireDatabase, private storage: AngularFireStorage ) { }
+  constructor(private angularFireDatabase: AngularFireDatabase ) { }
 
-  getCardsTraining(url: string): Observable<CardTraining[]> {
-    //return this.angularFireDatabase.database.ref().child(url)
-    console.log(url);
-    return this.angularFireDatabase.list<CardTraining>(url).valueChanges();
+  public getCardsTraining(url: string): Observable<MuscleGroupModel[]> {
+    return this.angularFireDatabase.list<MuscleGroupModel>(url).valueChanges();
   }
-
-  // getVideo(): Observable<any> {
-  //   return this.angularFireDatabase.list('schede/uomo/massa-muscolare').valueChanges();
-  //  // console.log('test:',test);
-  // }
 
 }

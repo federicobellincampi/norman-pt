@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { AppState } from '../../../../core/core.module';
+import { getCardsTrainer } from './store/selectors/cards-training.selectors';
+import { MuscleGroupModel } from '../../../../models/muscle-group';
+import { Observable } from 'rxjs';
 import * as CardsTrainingActions from './store/actions/cards-training.actions';
 import * as RooterActions from '../../../../core/router/store/router.actions';
-import { getCardsTrainer } from './store/selectors/cards-training.selectors';
-import { CardTraining } from '../../../../models/card-training.model';
-import { Observable } from 'rxjs';
   
 @Component({
   selector: 'nf-trainers',
@@ -14,12 +14,15 @@ import { Observable } from 'rxjs';
 })
 export class TrainersComponent {
 
-  public getCardsTrainer$: Observable<CardTraining[]> = this.store.pipe(select(getCardsTrainer))
+  public getCardsTrainer$: Observable<MuscleGroupModel[]> = this.store.pipe(select(getCardsTrainer))
+  items: Array<string>;
   
   constructor(private store: Store<AppState>) {
-    
-    // this.store.dispatch(CardsTrainingActions.loadCardsTraining());
-    // this.store.pipe(select(getCardsTrainer)).subscribe(val => console.log(val ))
+    this.store.dispatch(CardsTrainingActions.loadCardsTraining());
+  }
+
+  test() {
+    this.getCardsTrainer$.subscribe(val => console.log(val));
   }
 
   public navToCardTrainer(card: string): void {

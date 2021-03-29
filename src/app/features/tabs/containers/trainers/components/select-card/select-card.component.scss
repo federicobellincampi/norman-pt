@@ -1,8 +1,29 @@
 
-  div {
-    width: 100%;
-    max-height: 50%;
-    min-height: 100px;
-    background-color: white;
-    border-bottom: 3px solid red;
+  ion-card {
+    font-family: 'Lato';
+    // height: 25vh;
+    height: 20vh;
+  }
+
+  h2 {
+    position: absolute;
+    top: 0;
+    color: white;
+    font-weight: 600;
+    margin: 3vh 3vh 2vh;;
+    font-size: 4vh;
+  }
+
+  ul {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-size: 2vh;
+    font-weight: 400;
+    margin: 0 3vh 3vh;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+    }
   }

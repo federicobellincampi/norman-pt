@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyAkwnjQrB-zETOb-Pqg5n0PTBnNaRF305Y",
-    authDomain: "norman-pt.firebaseapp.com",
-    databaseURL: "https://norman-pt-default-rtdb.firebaseio.com",
-    projectId: "norman-pt",
-    storageBucket: "norman-pt.appspot.com",
-    messagingSenderId: "973146745695",
-    appId: "1:973146745695:web:a312fa1bd4f75fd01b24ea",
-    measurementId: "G-4YHWZ1XGK9"
+    // apiKey: "AIzaSyAkwnjQrB-zETOb-Pqg5n0PTBnNaRF305Y",
+    // authDomain: "app-norman-pt-default-rtdb.firebaseio.com", //
+    databaseURL: "https://app-norman-pt-default-rtdb.firebaseio.com", //
+    projectId: "app-norman-pt", //
+    // storageBucket: "norman-pt.appspot.com",
+    //messagingSenderId: "973146745695",
+    appId: "1:69423479518:web:f664fb3ea61f0b8e4a604f", //
+    // measurementId: "G-4YHWZ1XGK9"
   }
 }
 

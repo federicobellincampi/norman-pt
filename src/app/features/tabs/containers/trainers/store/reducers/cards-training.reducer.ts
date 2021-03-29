@@ -1,12 +1,12 @@
 import { Action, createReducer, on } from "@ngrx/store";
-import { CardTraining } from "../../../../../../models/card-training.model";
+import { MuscleGroupModel } from "../../../../../../models/muscle-group";
 import * as CardsTrainingActions from '../actions/cards-training.actions';
 
 
 export interface CardsTrainingState {
     loaded: boolean;
     error?: boolean;
-    cards?: CardTraining[];
+    cards?: MuscleGroupModel[];
 }
 
 export const initialState: CardsTrainingState = {

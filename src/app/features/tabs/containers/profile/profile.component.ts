@@ -3,11 +3,7 @@ import { select, Store } from '@ngrx/store';
 import { AppState } from 'src/app/core/core.module';
 import { getGenderProfile, getGoalTrainingProfile, getProfile } from '../../../../core/profile/store/profile.selectors';
 import { Observable } from 'rxjs';
-import { getButtonDisable } from './store/selectors/save-changes.selectors';
 import * as ProfileActions from '../../../../core/profile/store/profile.actions';
-import * as SaveChangesActions from './store/actions/save-changes.actions';
-import { map, take, tap } from 'rxjs/operators';
-
 @Component({
   selector: 'nf-profile',
   templateUrl: './profile.component.html',
@@ -29,15 +25,7 @@ export class ProfileComponent {
     'massa muscolare' | 'perdere peso' | 'tonificarsi'
     > = this.store.pipe(select(getGoalTrainingProfile));
 
-  public getButtonDisable$: Observable<string> = this.store.pipe(select(getButtonDisable))
-  options = {
-    cssClass: 'my-custom-interface'
-  };
   constructor(private store: Store<AppState>) { }
-
-  public ionViewWillEnter(): void { 
-    
-  }
 
   public changeGender(gender: 'uomo' | 'donna'): void {
     this.store.dispatch(ProfileActions.saveProfileGender({ gender }))

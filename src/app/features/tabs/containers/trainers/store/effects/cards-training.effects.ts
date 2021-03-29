@@ -16,8 +16,8 @@ export class CardsTrainingEffects {
         .pipe(
             ofType(CardsTrainingActions.loadCardsTraining),
             switchMapTo( this.store.pipe(select(selectUser))),
-            switchMap((val: User) => 
-                this.getCardsTrainingService.getCardsTraining(`schede/${val.gender}/${val.goalTraining.replace(/\s/g, '-')}`).pipe(
+            switchMap((user: User) => 
+                this.getCardsTrainingService.getCardsTraining(`schede-allenamento/${user.gender}/${user.goalTraining.replace(/\s/g, '-')}`).pipe(
                     map(cards => CardsTrainingActions.loadCardsTrainingSuccess({ cards }) ),
                     catchError((error) => of(CardsTrainingActions.loadCardsTrainingFailed({ error })) )
                 )

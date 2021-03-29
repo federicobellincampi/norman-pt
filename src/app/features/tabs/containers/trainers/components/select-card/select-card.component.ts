@@ -7,11 +7,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class SelectCardComponent {
 
-    @Input() text: string = '';
-    @Output() $cardSelected: EventEmitter<string> = new EventEmitter();
+    @Input() img: string = 'petto-braccia-spalle.png';
+    @Input() title: string = '';
 
-    constructor() {
-      console.log(this.text);
-    }
+    @Output() $cardSelected: EventEmitter<string> = new EventEmitter();
 
 }

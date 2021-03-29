@@ -1,11 +1,25 @@
 <nf-header title="Allenamenti"></nf-header>
 
 <ion-content>
+    <div *ngIf="getCardsTrainer$ | async as cards; else skeleton">
+            <nf-select-card *ngFor="let card of cards" [img]="card.imgUrl" [title]="card.titolo">
+            </nf-select-card>
+        </div>
     
-    <!-- <nf-exercise></nf-exercise>  -->
-    <nf-select-card *ngFor="let cards of getCardsTrainer$ | async | keyvalue"
-        [text]="cards.value"
-        ($cardSelected)="navToCardTrainer($event)"
-    >
-    </nf-select-card>
+    <!-- <button (click)="test()"></button> -->
+
 </ion-content>
+
+
+<ng-template #skeleton>
+    <div>
+        <ion-card *ngFor="let item of [1, 2, 3]">
+            <ion-skeleton-text animated style="height: 20vh"></ion-skeleton-text>
+        </ion-card>
+    </div>
+</ng-template>
+
+
+<!-- <video width="320" height="240" *ngIf="getCardsTrainer$ | async as card" controls>
+            <source [src]="card[0].scheda1[0].urlVideo" type="video/mp4">
+        </video> -->

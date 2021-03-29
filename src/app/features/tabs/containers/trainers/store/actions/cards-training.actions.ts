@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { CardTraining } from "../../../../../../models/card-training.model";
+import { MuscleGroupModel } from "../../../../../../models/muscle-group";
 
 export const loadCardsTraining = createAction(
     '[Cards training] Load cards training',
@@ -7,7 +7,7 @@ export const loadCardsTraining = createAction(
 
 export const loadCardsTrainingSuccess = createAction(
     '[Cards training] Load cards training success',
-    props<{cards: CardTraining[]}>()
+    props<{cards: MuscleGroupModel[]}>()
 )
 
 export const loadCardsTrainingFailed = createAction(
