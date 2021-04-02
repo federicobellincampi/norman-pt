@@ -1,0 +1,21 @@
+
+<ion-card >
+  <ion-item class="ion-no-padding">
+
+    <video #player playsinline preload="auto">
+      <source [src]="urlVideo" type="video/mp4">
+    </video>
+
+    <div class="bar">
+      <ion-icon (click)="openFullScreen(player)" color="light" fill="clear" slot="icon-only"
+        name="play-circle-outline">
+      </ion-icon>
+    </div>
+
+    <ion-label>
+      <h2>{{name}}</h2>
+      <p>{{reps}} Ripetizioni</p>
+    </ion-label>
+
+  </ion-item>
+</ion-card>

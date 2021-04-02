@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
   template: `
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="home">
-          <ion-icon name="home-sharp"></ion-icon>
-          <ion-label>Home</ion-label>
+        <ion-tab-button tab="workouts">
+        <ion-icon name="barbell-outline"></ion-icon>          
+        <ion-label>Allenamenti</ion-label>
       </ion-tab-button>
 
       <ion-tab-button tab="profile">
@@ -20,9 +20,18 @@ import { Component } from '@angular/core';
   styles: [`
 
     ion-tab-bar {
-      --background: black;
+      --background: #212121;
+      --border: #212121;
       --color: white;
-      --ripple-color: 
+    }
+
+    ion-label {
+      font-family: 'Lato';
+      font-size: 12px;
+
+    }
+    
+    ion-icon {
     }
 
   `],

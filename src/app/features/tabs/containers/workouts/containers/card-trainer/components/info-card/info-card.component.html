@@ -1,0 +1,39 @@
+<ion-item mode="ios">
+  <ion-icon 
+    [ngClass]=
+    "{
+      'icon-open': open,
+      'icon-close': !open
+    }"
+    slot="end" 
+    name="chevron-down-outline"
+    (click)="openInfo()"
+    >
+  </ion-icon>
+  <ion-label>Come eseguire il circuito</ion-label>
+</ion-item>
+
+<div *ngIf="open">
+
+  <ion-label mode="ios" style="color: #f5f5f5 !important">
+    Difficoltà scheda:
+  </ion-label>
+  
+  <ul>
+    <li>
+      <strong>Facile:</strong> Ripetere il circuito per 3 volte
+    </li>
+    <li>
+      <strong>Medio:</strong> Ripetere il circuito per 4 volte
+    </li>
+    <li>
+      <strong>Difficile:</strong> Ripetere il circuito per 5 volte
+    </li>
+  </ul>
+
+  <ion-label mode="ios">
+    Alla fine di ogni giro recuperare 2/3 minuti prima di ripeterlo
+  </ion-label>
+
+</div>
+ 

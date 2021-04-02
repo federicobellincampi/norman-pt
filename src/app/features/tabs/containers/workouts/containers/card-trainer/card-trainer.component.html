@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-icon name="chevron-back-outline" (click)="backButtonHandler()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Esercizi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div>
+  <nf-info-card></nf-info-card>
+  <!-- <ion-label>
+    <h2>Come eseguire il circuito</h2>
+    <h3>Recupero tra un'esercizio e l'altro di MAX 30 sec</h3>
+    <ul>
+      <li>
+        <strong style="color: #f5f5f5;"> Facile:</strong> Eseguire il circuito per 3 volte
+      </li>
+      <li>
+        <strong style="color: #f5f5f5;"> Medio:</strong> Eseguire il circuito per 4 volte
+      </li>
+      <li>
+        <strong style="color: #f5f5f5;"> Difficile:</strong> Eseguire il circuito per 5 volte
+      </li>
+    </ul>
+  </ion-label> -->
+
+</div>
+
+<ion-content *ngIf="getExercieses$ | async as exercieses">
+
+  <nf-exercise *ngFor="let exerciese of exercieses[0]"
+    [urlVideo]="exerciese.urlVideo"
+    [name]="exerciese.nome"
+    [reps]="exerciese.ripetizioni"
+  >
+  </nf-exercise>
+
+
+
+</ion-content>

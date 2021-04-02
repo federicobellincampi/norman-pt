@@ -30,11 +30,31 @@
 
 $global-font-family: 'Lato';
 
+ion-app {
+  background-color: #212121;
+}
+
 ion-content {
   font-family: $global-font-family;
   --background: #f9f9f9;
   --padding-end: 16px;
   --padding-start: 16px;
+}
+
+ion-item {
+  --border-style: 0;
+  --background: #424242;
+}
+
+ion-label {
+  font-family: 'Lato';
+}
+
+ul {
+  padding: 0;
+  li {
+    list-style-type: none; 
+  }
 }
 
 // ion-select profile section

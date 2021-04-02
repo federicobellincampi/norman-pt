@@ -9,6 +9,7 @@ import { UserGuard } from './services/user.guard';
 import { LocalStorageService } from './services/local-storage.service';
 import { ProfileEffects } from './profile/store/profile.effects';
 import { ProfileState, reducer as profileReducer } from './profile/store/profile.reducer';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 export interface AppState {
   // auth: AuthState;
@@ -20,6 +21,7 @@ export interface AppState {
   declarations: [],
   imports: [
     CommonModule,
+    BrowserAnimationsModule,
     StoreModule.forRoot(
       {
         profile: profileReducer,

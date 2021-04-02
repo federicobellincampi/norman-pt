@@ -1,0 +1,26 @@
+ion-content {
+  --background: #212121;
+}
+
+ion-toolbar {
+  padding-left: 16px;
+  padding-right: 16px;
+  font-family: "Lato";
+  --background: black;
+  --color: white;
+}
+
+ion-header {
+  --border-color: transparent;
+}
+
+div {
+  height: auto;
+  background: black;
+  padding: 16px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom: 2px solid #bdbdbc;
+}
+
+

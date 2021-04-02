@@ -1,0 +1,27 @@
+<nf-header title="Allenamenti"></nf-header>
+
+<ion-content>
+    
+    <div style="text-align: center;">
+        <img style="height: 15vh" src="./assets/img/logo-trainer.svg" alt="">
+    </div>
+    
+    <div @opacityAnimation *ngIf="getCardsTrainer$ | async as cards">
+        <ion-card *ngFor="let card of cards; first as isFirst" button="true" mode="ios"
+            (click)="navToLevel(card.titolo, card.imgUrl)"
+            [style.background]="'url( '+ card.imgUrl + ') 0 0/100% 100% no-repeat'"
+            [class.first]="isFirst"
+            >
+            <h2>{{card.titolo}}</h2>
+        </ion-card>
+    </div>
+
+</ion-content>
+
+<!-- <ng-template #skeleton>
+    <div>
+        <ion-card *ngFor="let item of [1, 2, 3]">
+            <ion-skeleton-text animated style="height: 20vh"></ion-skeleton-text>
+        </ion-card>
+    </div>
+</ng-template> -->

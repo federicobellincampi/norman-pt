@@ -1,0 +1,37 @@
+.container-circles {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4vh;
+}
+
+.cirlce {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid limegreen;
+  border-radius: 50%;
+  background: limegreen;
+}
+
+.first-circle {
+  width: 4vh;
+  height: 4vh;
+  color: white;
+  font-family: cursive;
+  font-size: 3vh;
+}
+
+.second-circle {
+  width: 6vh;
+  height: 6vh;
+  opacity: 0.7;
+}
+
+.third-circle {
+  width: 8vh;
+  height: 8vh;
+  opacity: 0.3;
+}

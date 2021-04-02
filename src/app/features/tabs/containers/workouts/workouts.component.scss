@@ -1,0 +1,24 @@
+ion-content {
+  --background: #212121;
+  --padding-end: 0;
+  --padding-start: 0;
+}
+
+ion-card   { 
+  height: 15vh;
+  border: 2px solid white;  
+  font-family: 'Lato';
+}
+
+.first {
+  margin-top: 0;
+}
+
+h2 {
+  position: absolute;
+  top: 0;
+  color: white;
+  font-weight: 600;
+  margin: 3vh 3vh 2vh;;
+  font-size: 4vh;
+}

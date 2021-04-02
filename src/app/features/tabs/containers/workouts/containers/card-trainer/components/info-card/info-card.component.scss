@@ -1,0 +1,32 @@
+ion-item {
+  --background: black;
+}
+
+ion-label {
+  color: #bdbdbd !important;
+  font-weight: 600;
+}
+
+ion-icon {
+  font: 20px;
+  color: #bdbdbd;
+}
+
+.icon-open {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+}
+
+.icon-close {
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+}
+
+ul {
+  color: #bdbdbd;
+  font-family: "Lato";
+}
+
+strong {
+  color: #f5f5f5;
+}

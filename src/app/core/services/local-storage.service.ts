@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { MuscleGroupModel } from '../../models/muscle-group';
 import { User } from '../../models/user.model';
 import { ProfileState } from '../profile/store/profile.reducer';
 
@@ -18,8 +19,14 @@ export class LocalStorageService{
        return localStorage.getItem('user');
     }
 
-    cleanUser(): void {
-        localStorage.removeItem('user');
-     }
+    setLocalStorage(key: string, value: any[]): void {
+        localStorage.setItem(key, JSON.stringify(value));
+    }
+
+    gestLocalStorage(key: string): User | MuscleGroupModel[] {
+        return JSON.parse(localStorage.getItem(key));
+    }
+
+    
     
 }

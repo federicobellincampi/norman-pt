@@ -1,12 +1,12 @@
 export interface MuscleGroupModel {
     imgUrl: string;
     titolo: string;
-    livello: CardDifficultyModel;
+    livello: CardRepsLevelModel;
     schede: LevelModel; 
     scheda1?: any;
 }
 
-export interface CardDifficultyModel {
+export interface CardRepsLevelModel {
     facile: string;
     medio: string;
     difficile: string;

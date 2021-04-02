@@ -8,8 +8,8 @@ const routes: Routes = [
     component: TabsComponent,
     children: [
       {
-        path: 'home',
-        loadChildren: () => import('./containers/trainers/trainers.module').then(m => m.TrainersModule)
+        path: 'workouts',
+        loadChildren: () => import('./containers/workouts/workouts.module').then(m => m.TrainersModule)
       },
       {
         path: 'profile',
@@ -17,14 +17,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/home',
+        redirectTo: '/tabs/workouts',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/home',
+    redirectTo: '/tabs/workouts',
     pathMatch: 'full'
   }
 ];
