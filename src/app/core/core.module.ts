@@ -8,9 +8,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { UserGuard } from './services/user.guard';
 import { LocalStorageService } from './services/local-storage.service';
 import { ProfileEffects } from './profile/store/profile.effects';
-import { ProfileState, reducer as profileReducer } from './profile/store/profile.reducer';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
+import { MuscleGroupGuard } from "../features/tabs/containers/workouts/services/muscle-group.guard";
+import { LevelGuard } from "../features/tabs/containers/workouts/services/level.guard";
+import { ProfileState, reducer as profileReducer } from './profile/store/profile.reducer';
 export interface AppState {
   // auth: AuthState;
   profile: ProfileState;
@@ -47,6 +48,11 @@ export interface AppState {
       ProfileEffects, 
     ]),
   ],
-  providers:[UserGuard,LocalStorageService]
+  providers:[
+    UserGuard, 
+    MuscleGroupGuard,
+    LevelGuard, 
+    LocalStorageService
+  ]
 })
 export class CoreModule {}

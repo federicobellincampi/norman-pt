@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserGuard } from './core/services/user.guard';
+import { LevelGuard } from './features/tabs/containers/workouts/services/level.guard';
+import { MuscleGroupGuard } from './features/tabs/containers/workouts/services/muscle-group.guard';
 
 const routes: Routes = [
   {
@@ -14,20 +16,22 @@ const routes: Routes = [
   },
   {
     path: 'level',
-    loadChildren: () => import('./features/tabs/containers/workouts/containers/level/level.module').then(m => m.LevelModule)
+    loadChildren: () => import('./features/tabs/containers/workouts/containers/level/level.module').then(m => m.LevelModule),
+    canActivate: [MuscleGroupGuard]
   },
   {
     path: 'card-trainer',
-    loadChildren: () => import('./features/tabs/containers/workouts/containers/card-trainer/card-trainer.module').then(m => m.CardTrainerModule)
+    loadChildren: () => import('./features/tabs/containers/workouts/containers/card-trainer/card-trainer.module').then(m => m.CardTrainerModule),
+    canActivate: [LevelGuard]
   },
   {
     path: '',
-    redirectTo: '/tabs/workouts',
+    redirectTo: 'tabs',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: '/tabs/workouts',
+    redirectTo: 'tabs',
     pathMatch: 'full'
   }
 ];

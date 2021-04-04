@@ -5,8 +5,6 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../../../../../../shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 import { LevelNumberComponent } from './components/level-number/level-number.component';
-
-
 @NgModule({
   declarations: [LevelComponent, LevelNumberComponent],
   imports: [
@@ -19,6 +17,6 @@ import { LevelNumberComponent } from './components/level-number/level-number.com
         component: LevelComponent,
       }
     ])
-  ]
+  ],
 })
 export class LevelModule { }

@@ -1,6 +1,15 @@
-<nf-header [title]="(getMuscleGroupSelected$ | async)" [showBackButton]="true"
-  imgUrl="https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2Fimg%2Fdorso.png?alt=media&token=01213d29-70f3-4216-88ea-46bc8e54213b">
-</nf-header>
+<header
+  [ngStyle]="{  'background-image': 'url(' + (getImgUrl$ | async) + ')'  }"
+>
+  <div class="toolbar">
+    <ion-label class="toolbar-title">
+     <div> 
+       <ion-icon name="chevron-back-outline" (click)="backButtonHandler()"></ion-icon> 
+      </div> 
+      <h2 >{{getMuscleGroupSelected$ | async}}</h2>
+    </ion-label>
+  </div>
+</header>
 
 <ion-content *ngIf="getLevels$ | async as levels">
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MuscleGroupGuard } from './containers/workouts/services/muscle-group.guard';
 import { TabsComponent } from './tabs.component';
 
 const routes: Routes = [
@@ -9,7 +10,8 @@ const routes: Routes = [
     children: [
       {
         path: 'workouts',
-        loadChildren: () => import('./containers/workouts/workouts.module').then(m => m.TrainersModule)
+        loadChildren: () => import('./containers/workouts/workouts.module').then(m => m.TrainersModule),
+
       },
       {
         path: 'profile',

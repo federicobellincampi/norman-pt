@@ -1,15 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from '../../../../../../core/core.module';
-import { getMuscleGroupSelected } from '../../store/selectors/muscle-group.selectors';
+import { getImgUrl, getMuscleGroupSelected } from '../../store/selectors/muscle-group.selectors';
 import { LevelModel } from '../../../../../../models/muscle-group';
-import { getCardLevels } from '../../store/selectors/cards-training.selectors'
-import * as MuscleGroupActions from '../../store/actions/muscle-group.actions';
-// import * as CardsTrainingActions from "../../store/actions/cards-training.actions";
-import * as LevelsActions from "../../store/actions/levels.actions";
 import { getLevels } from '../../store/selectors/levels.selectors';
-
+import * as MuscleGroupActions from '../../store/actions/muscle-group.actions';
+import * as LevelsActions from "../../store/actions/levels.actions";
+import * as RouterActions from '../../../../../../core/router/store/router.actions';
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'nf-level',
   templateUrl: './level.component.html',
@@ -17,17 +16,28 @@ import { getLevels } from '../../store/selectors/levels.selectors';
 })
 export class LevelComponent {
 
-  public getMuscleGroupSelected$: Observable<any> = this.store.pipe(select(getMuscleGroupSelected))
-  public getLevels$: Observable< any> = this.store.pipe(select(getLevels))
+  public getMuscleGroupSelected$: Observable<string> = this.store.pipe(select(getMuscleGroupSelected))
+  public getImgUrl$: Observable<string> = this.store.pipe(select(getImgUrl))
+  public getLevels$: Observable<LevelModel> = this.store.pipe(select(getLevels))
 
-  constructor(private store: Store<AppState>) { 
+  @HostBinding("style.--some-var")
+  private value: string ="https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2Fimg%2Fpetto-braccia-spalle.png?alt=media&token=de931f64-1303-4f9f-852a-2c15e355b2db";
+
+  @HostBinding("attr.style")
+  public get valueAsStyle(): any {
+    return this.sanitizer.bypassSecurityTrustStyle(`--some-var: ${this.value}`);
+  }
+
+  constructor(private store: Store<AppState>, private sanitizer: DomSanitizer) { 
     this.store.dispatch(LevelsActions.loadLevels())
-    // this.store.dispatch(CardsTrainingActions.loadCardLevels())
   }
 
   public navToCardTrainer(levelSelected: string): void {
     this.store.dispatch(MuscleGroupActions.levelSelected( { levelSelected } ))
   }
 
+  public backButtonHandler(): void {
+    this.store.dispatch(RouterActions.back())
+  }
 
 }

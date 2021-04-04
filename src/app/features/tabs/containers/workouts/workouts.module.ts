@@ -34,7 +34,6 @@ import { workoutsComponent } from './workouts.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     workoutsRoutingModule,
-
     StoreModule.forFeature('workouts', reducers),
     EffectsModule.forFeature(
       [

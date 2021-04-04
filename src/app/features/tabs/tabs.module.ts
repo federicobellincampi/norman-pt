@@ -10,6 +10,6 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
     IonicModule,
     CommonModule,
     TabsPageRoutingModule
-  ]
+  ],
 })
 export class TabsModule { }

@@ -1,3 +1,30 @@
+header {
+  background-size: cover;
+}
+
+.toolbar {
+  height: 15vh;
+
+  ion-icon {
+    color: black;
+    font-size: 25px;
+  }
+
+  .toolbar-title {
+    display: flex;
+    margin: 0;
+    padding-top: 20px;
+
+  }
+    h2 {
+      color: black;
+      font-family: 'Lato';
+      font-weight: 600;
+      margin-left: 50px;
+    }
+  
+}
+
 ion-content {
   --background: #212121;
   --padding-end: 0;
@@ -10,6 +37,14 @@ ion-item {
 
 ion-label {
   margin-left: 6vh;
-  font-family: 'Lato';
+  h2{
+    color: #f5f5f5;
+  }
+  p {
+    color:#bdbdbd
+  }
+}
 
+ion-icon {
+  color: #f5f5f5;
 }

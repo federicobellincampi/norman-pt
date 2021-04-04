@@ -2,15 +2,13 @@ import { Action, createReducer, on } from "@ngrx/store";
 import * as MuscleGroupActions from '../actions/muscle-group.actions';
 
 export interface MuscleGroup {
-    muscleGroupSelected: string;
+    muscleGroupSelected?: string;
     imgUrl: string;
-    levelSelected: string;
+    levelSelected?: string;
 }
 
 export const initialState: MuscleGroup = {
-    muscleGroupSelected: '',
     imgUrl: '',
-    levelSelected: ''
 }
 
 const CardsTrainingReducer = createReducer(
