@@ -10,12 +10,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         </ion-title>
         <ion-buttons slot="end">
           <ion-button [disabled]="disable" (click)="$goNext.emit()">
-            <span>Avanti</span> <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            <span>Avanti</span> <ion-icon name="arrow-forward-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
         <ion-buttons slot="start">
           <ion-button size="large" (click)="$goBack.emit()">
-            <ion-icon name="arrow-back-circle-outline"></ion-icon> <span>Indietro</span>
+            <ion-icon name="arrow-back-outline"></ion-icon> <span>Indietro</span>
           </ion-button>
         </ion-buttons>
       </ion-toolbar>
@@ -27,6 +27,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
       --background: #f9f9f9;
       font-family: 'Lato';
     }
+
+    ion-title {
+      font-size: 2.5vh;
+    }
+
     ion-button {
       --color: black;
     }
@@ -34,10 +39,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
       --color: #777777;
     }
     span {
+      font-family: 'Lato';
       margin: 0 10px;
+      font-size: 2.5vh;
     }
     ion-icon {
-      font-size: 30px;
+      font-size: 3vh;
     }
   `],
 })

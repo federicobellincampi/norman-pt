@@ -7,9 +7,15 @@ import * as RouterActions from '../../core/router/store/router.actions';
   selector: "nf-initialize-app-flow",
   template: `
     <ion-content>
-      <ion-button 
+
+      <video autoplay="autoplay" loop="loop" muted="muted" id="video-back">
+        <source src="./assets/video/prova.mp4" type="video/mp4">
+      </video>
+
+      <img src="./assets/img/logo-trainer.svg">
+    
+      <ion-button mode="ios"
         (click)="goToStep1()"
-        color="success"
       >
         Iniziamo
       </ion-button>
@@ -17,8 +23,33 @@ import * as RouterActions from '../../core/router/store/router.actions';
   `,
   styles: [`
     ion-content {
-      --background: url(../../../assets/gif/norman-pt-init.gif) 0 0/100% 100% no-repeat;
+      --padding-end: 0;
+      --padding-start: 0;
     }
+
+    ion-button {
+      position: absolute;
+      bottom: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      border: 2px solid white;
+      border-radius: 50px;
+      --background: transparent;
+      --background-activated: black;
+      --border-radius: 50px;
+    }
+
+    img {
+      position: absolute;
+      bottom: 30%;
+      left: 0;
+    }
+
+    #video-back {
+      height: -webkit-fill-available;
+    }
+
   `],
 })
 export class InitializeAppFlowComponent {

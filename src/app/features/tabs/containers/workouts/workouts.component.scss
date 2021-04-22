@@ -1,24 +1,45 @@
-ion-content {
-  --background: #212121;
-  --padding-end: 0;
-  --padding-start: 0;
+
+.container {
+  height: 100%;
+  width: 100%;
+  background: url(../../../../../assets/img/workout.jpg) no-repeat center center / cover;
+}
+
+.logo {
+  height: 20vh;
+  // box-shadow: 
+  //   inset 5px 5px 10px #ccc,
+  //   5px 5px 10px #ccc;
 }
 
 ion-card   { 
   height: 15vh;
-  border: 2px solid white;  
+  border-radius: 25px;
+  background: transparent;
   font-family: 'Lato';
+
+  h2 {
+    position: absolute;
+    top: 0;
+    color: white;
+    font-weight: 400;
+    margin: 3vh 3vh 2vh;;
+    font-size: 2.5vh;
+  }
 }
 
-.first {
-  margin-top: 0;
+.card-container {
+  backdrop-filter: blur(50px);
+  padding: 1.6vh 0;
+  margin: 0 1.6vh;
+  border-radius: 20px;
 }
+
 
 h2 {
-  position: absolute;
-  top: 0;
   color: white;
-  font-weight: 600;
-  margin: 3vh 3vh 2vh;;
-  font-size: 4vh;
+  font-weight: 400;
+  margin: 2vh;
+  font-size: 2.5vh;
+  text-align: center;
 }

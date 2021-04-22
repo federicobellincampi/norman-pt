@@ -31,7 +31,7 @@
 $global-font-family: 'Lato';
 
 ion-app {
-  background-color: #212121;
+  background: #212121;
 }
 
 ion-content {
@@ -41,13 +41,26 @@ ion-content {
   --padding-start: 16px;
 }
 
+ion-toolbar{
+  font-family: $global-font-family;
+}
+
+
+ion-button {
+  font-family: $global-font-family;
+}
+
 ion-item {
   --border-style: 0;
   --background: #424242;
 }
 
 ion-label {
-  font-family: 'Lato';
+  font-family: $global-font-family;
+}
+
+h2 {
+  font-family: $global-font-family;
 }
 
 ul {

@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 @Component({
   selector: "nf-button-select",
   template: `
-    <ion-button
+    <ion-button mode="ios"
       [ngStyle]="{
         'border-color': selected ? color : '',
         opacity: selected ? '1' : '0.3'
@@ -36,6 +36,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
         width: 18vh;
         font-family: "Lato";
         font-weight: 600;
+        font-size: 2.5vh;
       }
 
       i {

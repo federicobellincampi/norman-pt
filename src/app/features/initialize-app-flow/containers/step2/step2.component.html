@@ -10,9 +10,9 @@
             </p>
         </ion-row>
 
-        <ion-row #row1> 
+        <ion-row #row1 style="margin: 8vh 3vh 0;"> 
 
-            <div *ngIf="getGenderProfile$ | async as gender">
+            <div style="width: 100%;" *ngIf="getGenderProfile$ | async as gender">
                 <nf-card 
                     *ngIf="gender === 'uomo'; else elseBlock1"
                     img="massa-muscolare.jpg"
@@ -37,9 +37,9 @@
      
         </ion-row>
 
-        <ion-row #row2>
+        <ion-row #row2 style="margin: 4vh 3vh 0;">
 
-            <div *ngIf="getGenderProfile$ | async as gender">
+            <div style="width: 100%;" *ngIf="getGenderProfile$ | async as gender">
                 <nf-card 
                     *ngIf="gender === 'uomo'; else elseBlock2"
                     img="perdita-peso.jpg"
@@ -61,21 +61,34 @@
                 >
                 </nf-card>
             </ng-template>
-            <!-- <div>
-                <nf-card 
-                    img="perdita-peso.jpg"
-                    title="perdere peso"
-                    colorTitle="#45b6fe"
-                    [selected]="getLoseWeightSelected$ | async"
-                    ($selectEvent)="loseWeightSelected()"
-                >
-                </nf-card>
-            </div> -->
-
 
         </ion-row>
 
+        <div *ngIf="getGenderProfile$ | async as gender">
+
+            <div class="col-woman" *ngIf="gender === 'donna'; else imgBlock">
+                <nf-gender-select 
+                    img="donna.png"
+                    [selected]="true"
+                >
+                </nf-gender-select>
+            </div> 
+    
+            <ng-template #imgBlock>
+                <div class="col-man">
+                    <nf-gender-select
+                        img="uomo.png"
+                        [selected]="true"
+                    >
+                    </nf-gender-select>
+                </div>
+            </ng-template>
+    
+        </div>
+
     </ion-grid>
+
+
 
 </ion-content>
 

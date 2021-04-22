@@ -8,6 +8,7 @@ import { SharedModule } from '../../../../shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { CardModule } from '../../components/card/card.module';
+import { GenderSelectModule } from '../../components/gender-select/gender-select.module';
 
 /* Components */
 import { Step2Component } from './step2.component';
@@ -22,6 +23,7 @@ import { Step2Component } from './step2.component';
     FormsModule,
     IonicModule,
     CardModule,
+    GenderSelectModule,
     RouterModule.forChild([
       {
         path: '',

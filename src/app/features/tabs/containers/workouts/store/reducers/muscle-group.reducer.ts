@@ -22,7 +22,7 @@ const CardsTrainingReducer = createReducer(
     on(MuscleGroupActions.levelSelected, (state, action) => (
         { 
             ...state, 
-            levelSelected: action.levelSelected 
+            levelSelected: action.levelSelected.substring(0, 7).toUpperCase() + " " + action.levelSelected.substring(7)
     })),
 )
 

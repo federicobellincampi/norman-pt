@@ -1,24 +1,40 @@
-
-  h1 {
-    font-size: 3vh;
-    font-weight: 600;
-    margin: 5vh auto 0;    
-  }
-
-  p {
-    font-size: 2vh;
-    margin-bottom: 0;
-  }
-
-.col-woman {
-  position: absolute;
-  left: -60%;
-  top: 43vh;
-  border-radius: 10%;
+h1 {
+  font-size: 3vh;
+  font-weight: 600;
+  margin: 5vh auto 0;
 }
 
-.col-man {
-  position: absolute;
-  right: -60%;
-  top: 39vh;
+p {
+  font-size: 2vh;
+  margin-bottom: 0;
+}
+
+.row-header {
+  margin-top: 8vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.row-buttons {
+  display: flex;
+  margin-top: 5vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-imgs {
+  background: url(../../../../../assets/img/logo-trainer-original.svg);
+  margin-top: 3vh;
+
+  .col-woman {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .col-man {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }

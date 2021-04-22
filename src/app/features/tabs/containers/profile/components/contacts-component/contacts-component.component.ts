@@ -31,14 +31,11 @@ import { Component } from "@angular/core";
 
       ion-fab-button {
         --background: #474747;
+        --color: white;
       }
-
-      ion-fab-list {
-        color: #fff;
-        ion-icon {
-          font-size: 3vh;
-          color: white;
-        }
+      
+      ion-icon {
+        font-size: 3vh;
       }
     `,
   ],

@@ -14,7 +14,7 @@ export const initialState: LevelsState = {
 const LevelsReducer = createReducer(
     initialState,
     on(LevelsActions.loadLevels, (state, action) => ({ ...state, loaded: false })),
-    on(LevelsActions.loadLevelsSuccess, (state, action) => ({ ...state, loaded: true, levels: action.levels[0] }))
+    on(LevelsActions.loadLevelsSuccess, (state, action) => ({ ...state, loaded: true, levels: action.levels[0] })),
 )
 
 export function reducer(state: LevelsState | undefined, action: Action) {

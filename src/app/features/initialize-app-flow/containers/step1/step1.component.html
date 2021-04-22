@@ -2,7 +2,7 @@
 
     <ion-grid>
 
-        <ion-row style="text-align: center; margin-top: 8vh;">
+        <ion-row class="row-header">
       
             <p #p>
                 Segui questi semplici passaggi per ottenere il piano di fitness più adatatto a te.
@@ -13,47 +13,46 @@
 
         </ion-row>
 
-        <ion-row style="text-align: center; display: flex; margin-top: 5vh; align-items: center;">
+        <ion-row class="row-buttons">
 
-            <ion-col #woman>
+            <div #woman style="margin-right: 2vh">
                 <nf-button-select #woman
                     text="Donna"
                     color="#ff99cc"
                     [selected]="getDonnaSelected$ | async"
                     ($selectEvent)="womanSelected()"
                 ></nf-button-select>
-            </ion-col>
-            <ion-col #man>
+            </div>
+            <div #man>
                 <nf-button-select #man
                     text="Uomo"
                     color="#45b6fe"
                     [selected]="getUomoSelected$ | async"
                     ($selectEvent)="manSelected()"
                 ></nf-button-select>
-            </ion-col>
+            </div>
 
         </ion-row>
 
-        <ion-row>
+        <ion-row class="row-imgs">
 
-            <!-- <ion-col #donna class="col-woman">
+            <div #womanImg class="col-woman">
                 <nf-gender-select
-                    title="Donna"
-                    colorTitle="#ff78cb"
+                    img="donna.png"
                     [selected]="getDonnaSelected$ | async"
                     ($selectEvent)="womanSelected()"
                 >
                 </nf-gender-select>
-            </ion-col> -->
+            </div> 
 
-            <ion-col #manImg class="col-man">
+            <div #manImg class="col-man">
                 <nf-gender-select
-                    img="andrea-uomo.png"
+                    img="uomo.png"
                     [selected]="getUomoSelected$ | async"
                     ($selectEvent)="manSelected()"
                 >
                 </nf-gender-select>
-            </ion-col>
+            </div>
 
         </ion-row>
 

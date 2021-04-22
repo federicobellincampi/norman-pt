@@ -4,6 +4,7 @@ import { AppState } from 'src/app/core/core.module';
 import { getGenderProfile, getGoalTrainingProfile, getProfile } from '../../../../core/profile/store/profile.selectors';
 import { Observable } from 'rxjs';
 import * as ProfileActions from '../../../../core/profile/store/profile.actions';
+import * as CardsTrainingActions from '../workouts/store/actions/cards-training.actions';
 @Component({
   selector: 'nf-profile',
   templateUrl: './profile.component.html',
@@ -29,10 +30,12 @@ export class ProfileComponent {
 
   public changeGender(gender: 'uomo' | 'donna'): void {
     this.store.dispatch(ProfileActions.saveProfileGender({ gender }))
+    this.store.dispatch(CardsTrainingActions.loadCardsTraining());
   }
 
   public changeGoalTraining(goalTraining: 'massa muscolare' | 'perdere peso' | 'tonificarsi'): void {
     this.store.dispatch(ProfileActions.saveProfileGoalTraining({ goalTraining }))
+    this.store.dispatch(CardsTrainingActions.loadCardsTraining());
   }
 
 }

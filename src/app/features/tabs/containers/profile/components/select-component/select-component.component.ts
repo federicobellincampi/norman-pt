@@ -3,11 +3,11 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 @Component({
   selector: "nf-select-component",
   template: `
-    <ion-item>
+    <ion-item mode="ios">
       <i *ngIf="title === 'Genere'" class="fa fa-venus-mars"></i>
       <i *ngIf="title === 'Obiettivo'" class="fas fa-dumbbell"></i>
       <ion-label>{{ title }}</ion-label>
-      <ion-select
+      <ion-select appNoArrow
         [ngClass]="{
           'custom-interface-man': gender === 'uomo',
           'custom-interface-woman': gender === 'donna'
@@ -42,10 +42,12 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
         --background: #474747;
         --color: white;
         --border-style: 0;
+        --min-height: 8vh;
         margin: 16px;
-        border-radius: 10px;
+        font-size: 2vh;
       }
 
+  
       ion-label {
         font-family: "Lato" !important;
         font-weight: 600;
@@ -54,9 +56,13 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
       ion-select::part(text) {
         position: absolute;
         right: 4vh;
-        font-family: cursive;
+        font-family: "Lato";
         font-weight: 400;
       }
+
+      /* ion-select::part(icon) {
+        display: none;
+      } */
 
       .custom-interface-man {
         color: #45b6fe;

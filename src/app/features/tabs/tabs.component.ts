@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'nf-tabs',
   template: `
-    <ion-tabs>
+    <ion-tabs mode="ios">
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="workouts">
         <ion-icon name="barbell-outline"></ion-icon>          
@@ -20,9 +20,10 @@ import { Component } from '@angular/core';
   styles: [`
 
     ion-tab-bar {
-      --background: #212121;
-      --border: #212121;
-      --color: white;
+      --background: black;
+      --border: black;
+      /* --color: white; */
+
     }
 
     ion-label {
@@ -31,7 +32,8 @@ import { Component } from '@angular/core';
 
     }
     
-    ion-icon {
+    ion-tab-button {
+      --color-selected: white;
     }
 
   `],

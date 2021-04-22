@@ -1,5 +1,5 @@
 ion-content {
-    --background: #212121;
+    --background: black;
     --padding-end: 0;
     --padding-start: 0;
 }
@@ -12,4 +12,9 @@ img {
 div {
     //font-family: 'Lato' !important;
     text-align: center;
+}
+
+.info {
+    padding: 16px;
+    color: white;
 }

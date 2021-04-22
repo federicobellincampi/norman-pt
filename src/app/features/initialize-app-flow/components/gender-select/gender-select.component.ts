@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
   selector: "nf-gender-select",
@@ -16,14 +16,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
   `,
   styleUrls: ["./gender-select.component.scss"],  
 })
-export class GenderSelectComponent implements OnInit {
+export class GenderSelectComponent {
 
   @Input() img: string = '';
   @Input() selected: boolean = false; 
 
   @Output() $selectEvent: EventEmitter<void> = new EventEmitter();
-  
-  constructor() {}
 
-  ngOnInit() {}
+
 }

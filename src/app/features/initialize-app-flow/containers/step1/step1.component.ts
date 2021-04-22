@@ -5,7 +5,6 @@ import { AppState } from "../../../../core/core.module";
 import { TransformAnimationService } from "../../../../animations/transform-animation.service";
 import { getFooterDisable } from "../../store/selectors/ui.selectors";
 import { getWomanSelected, getManSelected } from "../../store/selectors/gender.selectors";
-// import { getGenderProfile } from "../../../../core/profile/store/profile.selectors";
 import * as RouterActions from "../../../../core/router/store/router.actions";
 import * as GenderActions from '../../store/actions/gender.actions';
 
@@ -19,6 +18,7 @@ export class Step1Component implements OnInit{
   @ViewChild("p", { read: ElementRef, static: true }) p: ElementRef;
   @ViewChild("h1", { read: ElementRef, static: true }) h1: ElementRef;
   @ViewChild("woman", { read: ElementRef, static: true }) woman: ElementRef;
+  @ViewChild("womanImg", { read: ElementRef, static: true }) womanImg: ElementRef;
   @ViewChild("man", { read: ElementRef, static: true }) man: ElementRef;
   @ViewChild("manImg", { read: ElementRef, static: true }) manImg: ElementRef;
 
@@ -31,9 +31,7 @@ export class Step1Component implements OnInit{
     private transformAnimationService: TransformAnimationService
   ) {}
 
-  public ngOnInit(): void {
-    // this.store.dispatch(GenderActions.checkGenderSelected());
-  }
+  public ngOnInit(): void { }
 
   public ionViewWillEnter(): void {
     this.store.dispatch(GenderActions.checkGenderSelected());
@@ -43,6 +41,7 @@ export class Step1Component implements OnInit{
         this.h1.nativeElement,
         this.woman.nativeElement,
         this.man.nativeElement,
+        this.womanImg.nativeElement,
         this.manImg.nativeElement
       ],
       200

@@ -1,9 +1,7 @@
-<header
-  [ngStyle]="{  'background-image': 'url(' + (getImgUrl$ | async) + ')'  }"
->
+<header [style.background]="'url(' + (getImgUrl$ | async) + ')'">
   <div class="toolbar">
     <ion-label class="toolbar-title">
-     <div> 
+     <div style="margin-left: 1.5vh;"> 
        <ion-icon name="chevron-back-outline" (click)="backButtonHandler()"></ion-icon> 
       </div> 
       <h2 >{{getMuscleGroupSelected$ | async}}</h2>
@@ -12,6 +10,12 @@
 </header>
 
 <ion-content *ngIf="getLevels$ | async as levels">
+
+  <div class="description">
+    <ion-label>
+      Scegli il livello più adatto a te
+    </ion-label>
+  </div>
 
   <ion-item *ngFor="let level of levels | keyvalue" (click)="navToCardTrainer(level.key)">
 

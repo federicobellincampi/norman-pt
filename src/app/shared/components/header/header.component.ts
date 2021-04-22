@@ -23,7 +23,7 @@ import * as RouterActions from '../../../core/router/store/router.actions';
         padding-left: 16px;
         padding-right: 16px;
         font-family: 'Lato';
-        --background: #212121;
+        --background: black;
         --color: white;
       }
 

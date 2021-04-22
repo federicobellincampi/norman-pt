@@ -1,28 +1,31 @@
 <nf-header title="Allenamenti"></nf-header>
 
-<ion-content>
+<div class="container">
     
     <div style="text-align: center;">
-        <img style="height: 15vh" src="./assets/img/logo-trainer.svg" alt="">
+        <img class="logo" src="./assets/img/logo-trainer.svg" alt="">
+    </div>
+
+    <div class="card-container" @opacityAnimation *ngIf="getCardsTrainer$ | async as cards; else skeleton">
+       <h2>Seleziona cosa vuoi allenare</h2> 
+
+        <div>
+            <ion-card *ngFor="let card of cards; first as isFirst" button="true" mode="ios"
+                (click)="navToLevel(card.titolo, card.imgUrl)"
+                [class.first]="isFirst"
+                >
+                    <h2>{{card.titolo}}</h2>
+                    <img [src]="card.imgUrl" alt="">
+            </ion-card>
+        </div>
     </div>
     
-    <div @opacityAnimation *ngIf="getCardsTrainer$ | async as cards">
-        <ion-card *ngFor="let card of cards; first as isFirst" button="true" mode="ios"
-            (click)="navToLevel(card.titolo, card.imgUrl)"
-            [style.background]="'url( '+ card.imgUrl + ') 0 0/100% 100% no-repeat'"
-            [class.first]="isFirst"
-            >
-            <h2>{{card.titolo}}</h2>
-        </ion-card>
-    </div>
+</div>
 
-</ion-content>
-
-<router-outlet></router-outlet>
-<!-- <ng-template #skeleton>
+<ng-template #skeleton>
     <div>
-        <ion-card *ngFor="let item of [1, 2, 3]">
-            <ion-skeleton-text animated style="height: 20vh"></ion-skeleton-text>
+        <ion-card *ngFor="let item of [1, 2]">
+            <ion-skeleton-text animated style="height: 15vh"></ion-skeleton-text>
         </ion-card>
     </div>
-</ng-template> -->
+</ng-template>

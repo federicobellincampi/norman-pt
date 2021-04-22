@@ -23,7 +23,7 @@ export class LocalStorageService{
         localStorage.setItem(key, JSON.stringify(value));
     }
 
-    gestLocalStorage(key: string): User | MuscleGroupModel[] {
+    gestLocalStorage(key: string): MuscleGroupModel[] {
         return JSON.parse(localStorage.getItem(key));
     }
 

@@ -14,6 +14,7 @@ import { reducers } from './store/reducers/index';
 import { MuscleGroupEffects } from './store/effects/muscle-group.effects';
 import { EffectsModule } from '@ngrx/effects';
 import { LevelsEffects } from './store/effects/levels.effects';
+import { ExercisesEffects } from './store/effects/exercises.effects';
 
 /* Services */
 import { GetCardsTrainingService } from './services/get-cards-training.service';
@@ -39,7 +40,8 @@ import { workoutsComponent } from './workouts.component';
       [
         CardsTrainingEffects,
         MuscleGroupEffects,
-        LevelsEffects
+        LevelsEffects,
+        ExercisesEffects
       ]
     ),
   ],

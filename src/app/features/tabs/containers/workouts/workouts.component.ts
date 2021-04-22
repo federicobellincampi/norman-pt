@@ -18,8 +18,8 @@ import * as MuscleGroupActions from './store/actions/muscle-group.actions';
         query(':enter', [
           style({ opacity: 0 }),
           stagger('200ms', [
-            style({ opacity: 0, transform: 'translateX(-200px)' }),
-		        animate('200ms ease-in', style({ opacity: 1, transform: 'translateY(0)' })),
+            style({ opacity: 0 }),
+		        animate('200ms ease-in', style({ opacity: 1,  })),
           ])
         ])  
       ]),
@@ -27,7 +27,8 @@ import * as MuscleGroupActions from './store/actions/muscle-group.actions';
         query(':enter', [
           style({ opacity: 0 }),
           stagger('200ms ease-in', [
-            style({ opacity: 0, transform: 'translateX(-200px)' })
+            style({ opacity: 0,  }),
+            animate('200ms ease-in', style({ opacity: 1,  })),
           ])
         ])  
       ])
@@ -39,10 +40,11 @@ export class workoutsComponent {
 
   public getCardsTrainer$: Observable<MuscleGroupModel[]> = this.store.pipe(select(getCardsTrainer))
   
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>) { 
+    this.store.dispatch(CardsTrainingActions.loadCardsTraining());
+  }
 
   public ionViewWillEnter(): void {
-    this.store.dispatch(CardsTrainingActions.loadCardsTraining());
   }
 
   public navToLevel(muscleGroupSelected: string, imgUrl: string): void {

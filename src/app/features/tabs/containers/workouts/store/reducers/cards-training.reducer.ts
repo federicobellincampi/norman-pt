@@ -7,9 +7,6 @@ export interface CardsTrainingState {
     loaded: boolean;
     error?: boolean;
     cards?: MuscleGroupModel[];
-    exercises?: ExerciseModel[][];
-    cardRepsLevel?: CardRepsLevelModel;
-    cardLevels?: any;
 }
 
 export const initialState: CardsTrainingState = {
@@ -25,11 +22,6 @@ const CardsTrainingReducer = createReducer(
         error: false, 
         cards: action.cards,
     })),
-    on(CardsTrainingActions.loadCardsTraining, (state, action) => ({ ...state, loaded: true, error: true })),
-    on(CardsTrainingActions.loadExercisesSuccess, (state, action) => ({ ...state, exercises: action.exercies })),
-    on(CardsTrainingActions.loadCardRepsLevelSuccess, (state, action) => ({ ...state, cardRepsLevel: action.repsLevel })),
-    on(CardsTrainingActions.loadCardLevelsSuccess, (state, action) => ({ ...state, cardLevels: action.cardLevels[0] }))
-
 )
 
 export function reducer(state: CardsTrainingState | undefined, action: Action) {
