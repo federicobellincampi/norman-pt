@@ -19,7 +19,6 @@ const clientReducer = createReducer(
     })),
     on(ProfileActions.saveProfileGoalTraining , (state, action) => ({ ...state, goalTraining: action.goalTraining })),
     on(ProfileActions.loadProfile , (state, action) => ({ ...state, gender: action.user.gender, goalTraining: action.user.goalTraining })),
-
 );
 
 export function reducer(state: ProfileState | undefined, action: Action) {

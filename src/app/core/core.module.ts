@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MuscleGroupGuard } from "../features/tabs/containers/workouts/services/muscle-group.guard";
 import { LevelGuard } from "../features/tabs/containers/workouts/services/level.guard";
 import { ProfileState, reducer as profileReducer } from './profile/store/profile.reducer';
+// import { AdMobFree } from '@ionic-native/admob-free/ngx';
+// import { AdmobService } from "./services/admob.service";
+
 export interface AppState {
   // auth: AuthState;
   profile: ProfileState;
@@ -52,7 +55,9 @@ export interface AppState {
     UserGuard, 
     MuscleGroupGuard,
     LevelGuard, 
-    LocalStorageService
+    LocalStorageService,
+    // AdMobFree,
+    // AdmobService
   ]
 })
 export class CoreModule {}

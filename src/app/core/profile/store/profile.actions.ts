@@ -1,6 +1,10 @@
 import { createAction, props } from '@ngrx/store';
 import { User } from '../../../models/user.model';
 
+export const saveProfile = createAction(
+    '[Profile] save profile ',
+)
+
 export const loadProfile = createAction(
     '[Profile] load profile',
     props<{ user: User }>()
@@ -16,6 +20,3 @@ export const saveProfileGoalTraining = createAction(
     props<{ goalTraining: 'massa muscolare' | 'perdere peso' | 'tonificarsi' }>()
 )
 
-export const saveProfile = createAction(
-    '[Profile] save Profile '
-)

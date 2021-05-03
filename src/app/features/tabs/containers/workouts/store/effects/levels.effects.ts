@@ -4,11 +4,9 @@ import { select, Store } from "@ngrx/store";
 import { combineLatest } from "rxjs";
 import { map, switchMapTo, take } from "rxjs/operators";
 import { AppState } from "../../../../../../core/core.module";
-import { GetCardsTrainingService } from "../../services/get-cards-training.service";
 import { getMuscleGroupSelected } from "../selectors/muscle-group.selectors";
 import { getCardsTrainer } from "../selectors/cards-training.selectors";
 import { MuscleGroupModel } from "../../../../../../models/muscle-group";
-import { LocalStorageService } from "src/app/core/services/local-storage.service";
 import * as LevelsActions from "../actions/levels.actions";
 
 @Injectable()
@@ -42,7 +40,5 @@ export class LevelsEffects {
   constructor(
     private actions$: Actions,
     private store: Store<AppState>,
-    private getCardsTrainingService: GetCardsTrainingService,
-    private localStorageService: LocalStorageService
   ) {}
 }

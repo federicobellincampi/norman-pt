@@ -12,9 +12,9 @@
 
         <ion-row #row1 style="margin: 8vh 3vh 0;"> 
 
-            <div style="width: 100%;" *ngIf="getGenderProfile$ | async as gender">
+            <div style="width: 100%;" *ngIf="getGenderState$ | async as gender">
                 <nf-card 
-                    *ngIf="gender === 'uomo'; else elseBlock1"
+                    *ngIf="gender.manSelected; else elseBlock1"
                     img="massa-muscolare.jpg"
                     title="Costruire massa muscolare"
                     colorTitle="#45b6fe"
@@ -39,9 +39,9 @@
 
         <ion-row #row2 style="margin: 4vh 3vh 0;">
 
-            <div style="width: 100%;" *ngIf="getGenderProfile$ | async as gender">
+            <div style="width: 100%;" *ngIf="getGenderState$ | async as gender">
                 <nf-card 
-                    *ngIf="gender === 'uomo'; else elseBlock2"
+                    *ngIf="gender.manSelected; else elseBlock2"
                     img="perdita-peso.jpg"
                     title="Perdere peso"
                     colorTitle="#45b6fe"
@@ -64,9 +64,9 @@
 
         </ion-row>
 
-        <div *ngIf="getGenderProfile$ | async as gender">
+        <div *ngIf="getGenderState$ | async as gender">
 
-            <div class="col-woman" *ngIf="gender === 'donna'; else imgBlock">
+            <div class="col-woman" *ngIf="gender.womanSelected; else imgBlock">
                 <nf-gender-select 
                     img="donna.png"
                     [selected]="true"

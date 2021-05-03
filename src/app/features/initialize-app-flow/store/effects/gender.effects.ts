@@ -35,9 +35,9 @@ export class GenderEffects {
     () =>
       this.actions$.pipe(
         ofType(GenderSelected.manSelected),
-        tap(() => {
-          this.store.dispatch(ProfileActions.saveProfileGender({ gender: 'uomo' }))
-        }),
+        // tap(() => {
+        //   this.store.dispatch(ProfileActions.saveProfileGender({ gender: 'uomo' }))
+        // }),
         mergeMapTo(this.store.pipe(select(getFooterDisable)).pipe(
           take(1),
           map((footerDisable: boolean) => {
@@ -54,9 +54,9 @@ export class GenderEffects {
     () =>
       this.actions$.pipe(
         ofType(GenderSelected.womanSelected),
-        tap(() => {
-          this.store.dispatch(ProfileActions.saveProfileGender({ gender: 'donna' }))
-        }),
+        // tap(() => {
+        //   this.store.dispatch(ProfileActions.saveProfileGender({ gender: 'donna' }))
+        // }),
         mergeMapTo(this.store.pipe(select(getFooterDisable)).pipe(
           take(1),
           map((footerDisable: boolean) => {

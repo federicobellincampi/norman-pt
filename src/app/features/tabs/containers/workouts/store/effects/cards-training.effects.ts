@@ -1,19 +1,15 @@
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { select, Store } from "@ngrx/store";
-import { combineLatest, forkJoin, of } from "rxjs";
+import { of } from "rxjs";
 import {
   catchError,
   map,
-  mapTo,
-  mergeMap,
   switchMap,
-  switchMapTo,
-  take,
   tap,
   withLatestFrom,
 } from "rxjs/operators";
-import { selectUser } from "../../../../../../core/profile/store/profile.selectors";
+import { getProfile } from "../../../../../../core/profile/store/profile.selectors";
 import { AppState } from "../../../../../../core/core.module";
 import { User } from "../../../../../../models/user.model";
 import { GetCardsTrainingService } from "../../services/get-cards-training.service";
@@ -24,14 +20,36 @@ import * as CardsTrainingActions from "../actions/cards-training.actions";
 @Injectable()
 export class CardsTrainingEffects {
 
+  checkCacheCardsTraining$ = createEffect(() => 
+  this.actions$.pipe(
+    ofType(CardsTrainingActions.checkCacheCardsTraining),
+    withLatestFrom(this.store.pipe(select(getProfile))),
+    map(([action, profile]: [{type: string}, {gender: 'uomo'|'donna', goalTraining: 'massa muscolare' | 'perdere peso' | 'tonificarsi'}]) => {
+      console.log('ceck',profile.gender + "-" + profile.goalTraining);
+      if(!this.localStorageService.gestLocalStorage(profile.gender + "-" + profile.goalTraining)) {
+        console.log('no cache');
+        this.store.dispatch(CardsTrainingActions.loadCardsTraining())
+      } else {
+        console.log('cache')
+        this.store.dispatch(
+          CardsTrainingActions.loadCardsTrainingSuccess({
+            cards: this.localStorageService.gestLocalStorage(
+              profile.gender + "-" + profile.goalTraining
+            ),
+          })
+        )
+      }
+    })
+  ),
+  { dispatch: false }
+  );
+
   getCardsTraining$ = createEffect(() =>
     this.actions$.pipe(
       ofType(CardsTrainingActions.loadCardsTraining),
-      switchMapTo(this.store.pipe(select(selectUser))),
-      switchMap((user: User) => {
-        if (!this.localStorageService.gestLocalStorage(user.gender + "-" + user.goalTraining)) {
-          console.log("no cache");
-          return this.getCardsTrainingService
+      withLatestFrom(this.store.pipe(select(getProfile))),
+      switchMap(([action, user]: [{type: string}, {gender: 'uomo'|'donna', goalTraining: 'massa muscolare' | 'perdere peso' | 'tonificarsi'}]) => {
+        return this.getCardsTrainingService
             .getCardsTraining(
               `schede-allenamento/${user.gender}/${user.goalTraining.replace(
                 /\s/g,
@@ -46,14 +64,6 @@ export class CardsTrainingEffects {
                 of(CardsTrainingActions.loadCardsTrainingFailed({ error }))
               )
             );
-        } else {
-          console.log('cache')
-          this.store.dispatch( CardsTrainingActions.loadCardsTrainingSuccess({
-            cards: this.localStorageService.gestLocalStorage(
-              user.gender + "-" + user.goalTraining
-            ),
-          }))        
-        }
       })
     )
   );
@@ -62,7 +72,7 @@ export class CardsTrainingEffects {
     () =>
       this.actions$.pipe(
         ofType(CardsTrainingActions.loadCardsTrainingSuccess),
-        withLatestFrom(this.store.pipe(select(selectUser))),
+        withLatestFrom(this.store.pipe(select(getProfile))),
         tap(
           ([action, user]: [
             { cards: MuscleGroupModel[]; type: string },

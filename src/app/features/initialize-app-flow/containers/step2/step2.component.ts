@@ -1,15 +1,14 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { getGenderProfile } from '../../../../core/profile/store/profile.selectors';
 import { AppState } from '../../../../core/core.module';
 import { getFooterDisable } from "../../store/selectors/ui.selectors";
 import { getLoseWeightSelected, getMuscleMassSelected, getToningSelected } from '../../store/selectors/goal-training.selectors';
 import { TransformAnimationService } from '../../../../animations/transform-animation.service';
+import { getGenderState } from '../../store/selectors/gender.selectors';
 import * as ProfileActions from '../../../../core/profile/store/profile.actions';
 import * as RouterActions from '../../../../core/router/store/router.actions';
 import * as GoalTrainingActions from '../../store/actions/goal-training.actions';
-
 @Component({
   selector: 'nf-step2',
   templateUrl: 'step2.component.html',
@@ -18,7 +17,7 @@ import * as GoalTrainingActions from '../../store/actions/goal-training.actions'
 export class Step2Component implements OnInit{
 
   public footerDisable$: Observable<boolean> = this.store.pipe(select(getFooterDisable));
-  public getGenderProfile$: Observable<'uomo'| 'donna'> = this.store.pipe(select(getGenderProfile));
+  public getGenderState$: Observable<{ manSelected: boolean, womanSelected: boolean }> = this.store.pipe(select(getGenderState));
   public getMuscleMassSelected$: Observable<boolean> = this.store.pipe(select(getMuscleMassSelected));
   public getToningSelected$: Observable<boolean> = this.store.pipe(select(getToningSelected));
   public getLoseWeightSelected$: Observable<boolean> = this.store.pipe(select(getLoseWeightSelected));
@@ -34,9 +33,7 @@ export class Step2Component implements OnInit{
     private transformAnimationService: TransformAnimationService
     ) {}
 
-  public ngOnInit(): void {
-    //this.store.dispatch(GoalTrainingActions.checkGoalTrainingSelected())
-  }
+  public ngOnInit(): void { }
 
   public ionViewWillEnter(): void {
     this.store.dispatch(GoalTrainingActions.checkGoalTrainingSelected())

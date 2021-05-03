@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from '../../../../../../core/core.module';
@@ -19,9 +19,7 @@ export class LevelComponent {
   public getImgUrl$: Observable<string> = this.store.pipe(select(getImgUrl))
   public getLevels$: Observable<LevelModel> = this.store.pipe(select(getLevels))
 
-  constructor(private store: Store<AppState>) { }
-
-  public ionViewWillEnter(): void {
+  constructor(private store: Store<AppState>) { 
     this.store.dispatch(LevelsActions.loadLevels())
   }
 

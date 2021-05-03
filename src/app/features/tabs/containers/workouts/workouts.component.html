@@ -1,12 +1,12 @@
 <nf-header title="Allenamenti"></nf-header>
 
-<div class="container">
+<div class="container" *ngIf="getCardsTrainer$ | async as cards; else skeleton">
     
     <div style="text-align: center;">
         <img class="logo" src="./assets/img/logo-trainer.svg" alt="">
     </div>
 
-    <div class="card-container" @opacityAnimation *ngIf="getCardsTrainer$ | async as cards; else skeleton">
+    <div class="card-container">
        <h2>Seleziona cosa vuoi allenare</h2> 
 
         <div>
@@ -23,9 +23,32 @@
 </div>
 
 <ng-template #skeleton>
-    <div>
-        <ion-card *ngFor="let item of [1, 2]">
-            <ion-skeleton-text animated style="height: 15vh"></ion-skeleton-text>
-        </ion-card>
+    <div class="container">
+        <div style="text-align: center;">
+            <img class="logo" src="./assets/img/logo-trainer.svg" alt="">
+        </div>
+        <div class="card-container">
+            <h2>Seleziona cosa vuoi allenare</h2> 
+    
+            <div>
+                <ion-card>
+                    <ion-skeleton-text animated style="height: 15vh"></ion-skeleton-text>
+                </ion-card>
+                <ion-card>
+                    <ion-skeleton-text animated style="height: 15vh"></ion-skeleton-text>
+                </ion-card>
+            </div>
+        </div>
     </div>
+
+
+    <!-- <div>
+        <ion-skeleton-text animated style="height: 100%"></ion-skeleton-text>
+    </div> -->
 </ng-template>
+
+<!-- <ion-button color="primary" (click)="Interstitial()">INTERSTITAL</ion-button>
+  
+<ion-button color="secondary" (click)="Reward()">REWARDVIDEO</ion-button> -->
+
+<router-outlet></router-outlet>

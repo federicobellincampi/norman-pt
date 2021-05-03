@@ -25,7 +25,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from "../../../../../environments/environment";
 
 /* Components */
-import { workoutsComponent } from './workouts.component';
+import { WorkoutsComponent } from './workouts.component';
 
 @NgModule({
   imports: [
@@ -46,7 +46,7 @@ import { workoutsComponent } from './workouts.component';
     ),
   ],
   declarations: [
-    workoutsComponent,
+    WorkoutsComponent,
   ],
   providers: [
     GetCardsTrainingService

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LevelGuard } from './containers/workouts/services/level.guard';
 import { MuscleGroupGuard } from './containers/workouts/services/muscle-group.guard';
 import { TabsComponent } from './tabs.component';
 
@@ -10,12 +11,31 @@ const routes: Routes = [
     children: [
       {
         path: 'workouts',
-        loadChildren: () => import('./containers/workouts/workouts.module').then(m => m.TrainersModule),
+        children: [
+          {
+            path: "",
+            loadChildren: () => import('./containers/workouts/workouts.module').then(m => m.TrainersModule),
+          },
+          {
+            path: "level",
+            loadChildren: () => import('./containers/workouts/containers/level/level.module').then(m => m.LevelModule),
+            canActivate: [MuscleGroupGuard]
+          },
+          {
+            path: 'card-trainer',
+            loadChildren: () => import('./containers/workouts/containers/card-trainer/card-trainer.module').then(m => m.CardTrainerModule),
+            canActivate: [LevelGuard]
+          },
 
+        ]
       },
       {
         path: 'profile',
         loadChildren: () => import('./containers/profile/profile.module').then(m => m.ProfileModule)
+      },
+      {
+        path: 'info',
+        loadChildren: () => import('./containers/info/info.module').then(m => m.InfoModule)
       },
       {
         path: '',
@@ -35,4 +55,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

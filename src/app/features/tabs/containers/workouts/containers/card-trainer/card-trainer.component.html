@@ -13,20 +13,11 @@
 
 <ion-content *ngIf="getExercieses$ | async as exercieses">
 
-  <!-- <nf-info-card></nf-info-card> -->
+  <nf-info-card></nf-info-card>
 
-  <div>
-    <ion-label>
-      Come eseguire la scheda
-    </ion-label>
-
-  </div>
-
-
-
-  <!-- <ion-label>
+ <h2>
     Esercizi
-  </ion-label> -->
+  </h2>
 
   <nf-exercise *ngFor="let exerciese of exercieses[0]" [urlVideo]="exerciese.urlVideo" [name]="exerciese.nome"
     [reps]="exerciese.ripetizioni">

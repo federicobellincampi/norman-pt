@@ -15,16 +15,6 @@ const routes: Routes = [
     loadChildren: () => import('./features/initialize-app-flow/initialize-app-flow.module').then( m => m.InitializeAppFlowModule)
   },
   {
-    path: 'level',
-    loadChildren: () => import('./features/tabs/containers/workouts/containers/level/level.module').then(m => m.LevelModule),
-    canActivate: [MuscleGroupGuard]
-  },
-  {
-    path: 'card-trainer',
-    loadChildren: () => import('./features/tabs/containers/workouts/containers/card-trainer/card-trainer.module').then(m => m.CardTrainerModule),
-    canActivate: [LevelGuard]
-  },
-  {
     path: '',
     redirectTo: 'tabs',
     pathMatch: 'full'

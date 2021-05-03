@@ -13,7 +13,7 @@ export class MuscleGroupEffects {
     muscleGroupSelected$ = createEffect(() => this.actions$
         .pipe(
             ofType(MuscleGroupActions.muscleGroupSelected),
-            tap( () => this.store.dispatch(RooterActions.go({ path: ['level']} )))
+            tap( () => this.store.dispatch(RooterActions.go({ path: ['/tabs/workouts/level']} )))
         ),
         { dispatch: false }
     )
@@ -21,7 +21,7 @@ export class MuscleGroupEffects {
     levelSelected$ = createEffect(() => this.actions$
     .pipe(
         ofType(MuscleGroupActions.levelSelected),
-        tap( () => this.store.dispatch(RooterActions.go({ path: ['card-trainer']} )))
+        tap( () => this.store.dispatch(RooterActions.go({ path: ['/tabs/workouts/card-trainer']} )))
     ),
     { dispatch: false }
 )

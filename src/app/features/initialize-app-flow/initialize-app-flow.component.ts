@@ -6,9 +6,10 @@ import * as RouterActions from '../../core/router/store/router.actions';
 @Component({
   selector: "nf-initialize-app-flow",
   template: `
-    <ion-content>
-
-      <video autoplay="autoplay" loop="loop" muted="muted" id="video-back">
+    
+    <video playsinline autoplay="autoplay" loop="loop" muted="muted" id="video-back"
+      poster="./assets/img/poster-video.png"
+    >
         <source src="./assets/video/prova.mp4" type="video/mp4">
       </video>
 
@@ -19,7 +20,8 @@ import * as RouterActions from '../../core/router/store/router.actions';
       >
         Iniziamo
       </ion-button>
-    </ion-content>
+
+
   `,
   styles: [`
     ion-content {
@@ -47,7 +49,8 @@ import * as RouterActions from '../../core/router/store/router.actions';
     }
 
     #video-back {
-      height: -webkit-fill-available;
+      position: fixed;
+      height: 100%;
     }
 
   `],

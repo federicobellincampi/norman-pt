@@ -1,0 +1,73 @@
+<div>
+  
+  <ion-item (click)="open = !open" >
+    <ion-label>
+      <h2>
+        {{title}}
+      </h2>
+    </ion-label>
+    <ion-icon 
+      name="chevron-down-outline"
+      [ngClass]="{'ion-icon-open': open}"
+    >
+    </ion-icon>
+
+  </ion-item>
+
+  <div *ngIf="open" [@enterAnimation] [ngClass]="{'container-description': open}" >
+
+    <h2>
+      {{subTitle}}
+    </h2>
+      <br>
+      <h2>
+        Esempio:
+      </h2>
+      <ul *ngIf="numberDays === 2">
+        <li>
+          <span><strong>Lunedi:</strong> Scheda A (esempio: Petto braccia e spalle)</span>
+        </li>
+        <li>
+          <span><strong>Giovedi:</strong> Scheda B (esempio Gambe e addome)</span>
+        </li>
+      </ul>
+
+      <ul *ngIf="numberDays === 4">
+        <li>
+          <span><strong>Lunedi:</strong> Scheda A (esempio: Petto braccia e spalle)</span>
+        </li>
+        <li>
+          <span><strong>Martedi:</strong> Scheda B (esempio Gambe e addome)</span>
+        </li>
+        <li>
+          <span><strong>Giovedi:</strong> Scheda A (esempio: Petto braccia e spalle)</span>
+        </li>
+        <li>
+          <span><strong>Venerdi:</strong> Scheda B (esempio Gambe e addome)</span>
+        </li>
+      </ul>
+
+      <ul *ngIf="numberDays === 6">
+        <li>
+          <span><strong>Lunedi:</strong> Scheda A (esempio: Petto braccia e spalle)</span>
+        </li>
+        <li>
+          <span><strong>Martedi:</strong> Scheda B (esempio Gambe e addome)</span>
+        </li>
+        <li>
+          <span><strong>Mercoledi:</strong> Scheda A (esempio: Petto braccia e spalle)</span>
+        </li>
+        <li>
+          <span><strong>Giovedi:</strong> Scheda B (esempio Gambe e addome)</span>
+        </li>
+        <li>
+          <span><strong>Venerdi:</strong> Scheda A (esempio: Petto braccia e spalle)</span>
+        </li>
+        <li>
+          <span><strong>Sabato:</strong> Scheda B (esempio Gambe e addome)</span>
+        </li>
+      </ul>
+
+  </div>
+
+</div>

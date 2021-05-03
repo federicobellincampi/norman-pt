@@ -30,12 +30,12 @@ export class ProfileComponent {
 
   public changeGender(gender: 'uomo' | 'donna'): void {
     this.store.dispatch(ProfileActions.saveProfileGender({ gender }))
-    this.store.dispatch(CardsTrainingActions.loadCardsTraining());
+    this.store.dispatch(CardsTrainingActions.checkCacheCardsTraining());
   }
 
   public changeGoalTraining(goalTraining: 'massa muscolare' | 'perdere peso' | 'tonificarsi'): void {
     this.store.dispatch(ProfileActions.saveProfileGoalTraining({ goalTraining }))
-    this.store.dispatch(CardsTrainingActions.loadCardsTraining());
+    this.store.dispatch(CardsTrainingActions.checkCacheCardsTraining());
   }
 
 }

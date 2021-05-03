@@ -45,7 +45,7 @@ export class GoalTrainingEffect {
           this.actions$.pipe(
             ofType(GoalTrainingActions.muscleMassSelected),
             tap(() => {
-              this.store.dispatch(ProfileActions.saveProfileGoalTraining({ goalTraining: 'massa muscolare' }))
+              //this.store.dispatch(ProfileActions.saveProfileGoalTraining({ goalTraining: 'massa muscolare' }))
             }),
             mergeMapTo(
               this.store.pipe(select(getFooterDisable))
@@ -67,7 +67,7 @@ export class GoalTrainingEffect {
           this.actions$.pipe(
             ofType(GoalTrainingActions.toningSelected),
             tap(() => {
-              this.store.dispatch(ProfileActions.saveProfileGoalTraining({ goalTraining: 'tonificarsi' }))
+              //this.store.dispatch(ProfileActions.saveProfileGoalTraining({ goalTraining: 'tonificarsi' }))
             }),
             mergeMapTo(this.store.pipe(select(getFooterDisable))
               .pipe(
@@ -88,7 +88,7 @@ export class GoalTrainingEffect {
           this.actions$.pipe(
             ofType(GoalTrainingActions.loseWeightSelected),
             tap(() => {
-              this.store.dispatch(ProfileActions.saveProfileGoalTraining({ goalTraining: 'perdere peso' }))
+              //this.store.dispatch(ProfileActions.saveProfileGoalTraining({ goalTraining: 'perdere peso' }))
             }),
             mergeMapTo(this.store.pipe(select(getFooterDisable))
               .pipe(

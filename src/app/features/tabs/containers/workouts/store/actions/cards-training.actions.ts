@@ -1,6 +1,11 @@
 import { createAction, props } from "@ngrx/store";
 import { MuscleGroupModel } from "../../../../../../models/muscle-group";
 
+
+export const checkCacheCardsTraining = createAction(
+    '[Cards training] Check cache cards training',
+)
+
 export const loadCardsTraining = createAction(
     '[Cards training] Load cards training',
 )

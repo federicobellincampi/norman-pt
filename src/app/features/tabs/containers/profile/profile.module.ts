@@ -6,6 +6,8 @@ import { IonicModule } from '@ionic/angular';
 import { SharedModule } from "src/app/shared/shared.module";
 import { ContactsComponentComponent } from "./components/contacts-component/contacts-component.component";
 import { SelectComponentComponent } from "./components/select-component/select-component.component";
+import { InAppBrowser } from "@ionic-native/in-app-browser/ngx";
+import { AppAvailability } from "@ionic-native/app-availability/ngx";
 
 export const routes: Routes = [
   {
@@ -26,5 +28,9 @@ export const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes),
   ],
+  providers:[
+    InAppBrowser,
+    AppAvailability
+  ]
 })
 export class ProfileModule {}
