@@ -1,24 +1,27 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { animate, style, transition, trigger } from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'nf-info-item',
   templateUrl: './info-item.component.html',
   styleUrls: ['./info-item.component.scss'],
   animations: [
-    trigger(
-      'enterAnimation', [
-        transition(':enter', [
-          style({opacity: 0}),
-          animate('500ms', style({transition: '0.5s ease-in-out'}))
-        ]),
-        transition(':leave', [
-          style({opacity: 1}),
-          animate('500ms', style({transition: '0.5s ease-in-out', height: '20px'}))
-        ])
-      ]
-    )
-  ],
+    trigger('slideInOut', [
+      state('true', style({
+        overflow: 'hidden',
+        height: '*',
+     
+      })),
+      state('false', style({
+        opacity: '0',
+        overflow: 'hidden',
+        height: '0px',
+ 
+      })),
+      transition('true => false', animate('300ms ease-in-out')),
+      transition('false => true', animate('300ms ease-in-out'))
+    ])
+  ]
 })
 export class InfoItemComponent implements OnInit {
 

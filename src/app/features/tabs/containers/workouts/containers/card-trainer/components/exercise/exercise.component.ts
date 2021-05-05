@@ -19,7 +19,7 @@ export class ExerciseComponent {
       elem.requestFullScreen();
     } else if (elem.webkitEnterFullscreen) {
       elem.webkitEnterFullscreen();
-      elem.enterFullscreen();
+      // elem.enterFullscreen();
     }
   }
 

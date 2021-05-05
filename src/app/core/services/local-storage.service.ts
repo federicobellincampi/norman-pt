@@ -27,6 +27,10 @@ export class LocalStorageService{
         return JSON.parse(localStorage.getItem(key));
     }
 
+    // clearLocalStorage(): void {
+    //     localStorage.removeItem()
+    // }
+
     
     
 }

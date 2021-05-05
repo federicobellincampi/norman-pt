@@ -13,9 +13,11 @@
             <ion-card *ngFor="let card of cards; first as isFirst" button="true" mode="ios"
                 (click)="navToLevel(card.titolo, card.imgUrl)"
                 [class.first]="isFirst"
+                [style.background-image]="'url('+ card.imgUrl +')'"
+                [style.background-size]="'cover'" 
                 >
-                    <h2>{{card.titolo}}</h2>
-                    <img [src]="card.imgUrl" alt="">
+                    <!-- <h2>{{card.titolo}}</h2> -->
+                    <!-- <img [src]="card.imgUrl" > -->
             </ion-card>
         </div>
     </div>

@@ -14,7 +14,7 @@
 
   </ion-item>
 
-  <div *ngIf="open" [@enterAnimation] [ngClass]="{'container-description': open}" >
+  <div [@slideInOut]="open" class="container-description" >
 
     <h2>
       {{subTitle}}
