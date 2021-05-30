@@ -2,14 +2,21 @@
 <ion-card >
   <ion-item class="ion-no-padding">
     <div class="vertical-center">
-
-      <video #player playsinline preload="auto" >
+      <!-- <video #player playsinline preload="auto" autoplay="autoplay" muted="muted" oncanplay="this.pause()">
         <source [src]="urlVideo" type="video/mp4">
-      </video>
+      </video> -->
+      <iframe 
+        [src]='safeURL' 
+        showinfo="0"
+        modestbranding=1
+        frameborder="0" 
+        playsinline="0"
+        allowfullscreen
+        ></iframe>
 
-        <ion-icon (click)="openFullScreen(player)" color="light" fill="clear" slot="icon-only"
+        <!-- <ion-icon (click)="openFullScreen(player)" color="light" fill="clear" slot="icon-only"
           name="play-circle-outline">
-        </ion-icon>
+        </ion-icon> -->
 
     </div>
 

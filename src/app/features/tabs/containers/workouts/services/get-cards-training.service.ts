@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
-import { MuscleGroupModel } from '../../../../../models/muscle-group';
+import { HttpClient } from '@angular/common/http';
+import { DB } from '../../../../../models/db.model';
 @Injectable()
 export class GetCardsTrainingService {
 
-  constructor(private angularFireDatabase: AngularFireDatabase ) { }
+  constructor(private httpClient: HttpClient) { }
 
-  public getCardsTraining(url: string): Observable<MuscleGroupModel[]> {
-    return this.angularFireDatabase.list<MuscleGroupModel>(url).valueChanges();
+  public getCardsTrainingDB(): Observable<DB> {
+    return this.httpClient.get<DB>('assets/db.json')
   }
 
 }

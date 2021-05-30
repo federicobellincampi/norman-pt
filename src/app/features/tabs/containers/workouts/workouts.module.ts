@@ -20,21 +20,23 @@ import { ExercisesEffects } from './store/effects/exercises.effects';
 import { GetCardsTrainingService } from './services/get-cards-training.service';
 
 /* Firestore */
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { environment } from "../../../../../environments/environment";
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
+// import { environment } from "../../../../../environments/environment";
 
 /* Components */
 import { WorkoutsComponent } from './workouts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     IonicModule,
     SharedModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireStorageModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireStorageModule,
     workoutsRoutingModule,
+    HttpClientModule,
     StoreModule.forFeature('workouts', reducers),
     EffectsModule.forFeature(
       [

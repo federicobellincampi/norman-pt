@@ -36,7 +36,7 @@ import * as RouterActions from '../../core/router/store/router.actions';
       bottom: 15%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 20px;
+      font-size: 2.5vh;
       border: 2px solid white;
       border-radius: 50px;
       --background: transparent;
@@ -52,11 +52,13 @@ import * as RouterActions from '../../core/router/store/router.actions';
 
     .video-back {
       height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 
     .video-container {
-      position: fixed;
       height: 100%;
+      width: 100%;
     }
 
     .video-container::before {

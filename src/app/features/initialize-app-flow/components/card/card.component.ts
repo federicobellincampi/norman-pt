@@ -32,6 +32,10 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
         color: white
       }
 
+      p{
+        font-size: 2vh;
+      }
+
     `
   ],
 })

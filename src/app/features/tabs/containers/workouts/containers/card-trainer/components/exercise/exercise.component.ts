@@ -1,11 +1,11 @@
-import { Component, Input, QueryList, ViewChild } from '@angular/core';
-
+import { Component, Input, OnInit, QueryList, ViewChild } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'nf-exercise',
   templateUrl: './exercise.component.html',
   styleUrls: ['./exercise.component.scss'],
 })
-export class ExerciseComponent {
+export class ExerciseComponent implements OnInit{
   
   @ViewChild('player') public videoPlayer: QueryList<any>;
 
@@ -13,6 +13,13 @@ export class ExerciseComponent {
   @Input() public name: string = '';
   @Input() public reps: string = '';
 
+  public safeURL: any;
+
+  constructor(private _sanitizer: DomSanitizer) {}
+
+  public ngOnInit(): void {
+    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.urlVideo);
+  }
 
   public openFullScreen(elem): void {
     if(elem.requestFullScreen) {
@@ -21,6 +28,10 @@ export class ExerciseComponent {
       elem.webkitEnterFullscreen();
       // elem.enterFullscreen();
     }
+    // this.platform.backButton.subscribeWithPriority(5, () => {
+    //   elem.exitFullscreen(); 
+    // });
   }
+
 
 }

@@ -3,11 +3,10 @@ import { select, Store } from '@ngrx/store';
 import { AppState } from '../../../../core/core.module';
 import { getCardsTrainer } from './store/selectors/cards-training.selectors';
 import { MuscleGroupModel } from '../../../../models/muscle-group';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import * as CardsTrainingActions from './store/actions/cards-training.actions';
 import * as MuscleGroupActions from './store/actions/muscle-group.actions';
 // import { AdmobService } from '../../../../core/services/admob.service';
-
 @Component({
   selector: 'nf-trainers',
   templateUrl: 'workouts.component.html',
@@ -17,12 +16,13 @@ import * as MuscleGroupActions from './store/actions/muscle-group.actions';
 export class WorkoutsComponent {
 
   public getCardsTrainer$: Observable<MuscleGroupModel[]> = this.store.pipe(select(getCardsTrainer))
-  
+  safeURL: any;
+
   constructor(
     private store: Store<AppState>, 
     // private admobService: AdmobService,
     ) { 
-    this.store.dispatch(CardsTrainingActions.checkCacheCardsTraining());
+     this.store.dispatch(CardsTrainingActions.loadCardsTraining())
   }
 
   ngOnInit() {
