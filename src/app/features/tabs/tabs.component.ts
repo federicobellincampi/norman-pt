@@ -1,13 +1,12 @@
-import { Component } from "@angular/core";
-import { select, Store } from "@ngrx/store";
-import { AppState } from "../../core/core.module";
-import { getRouter } from "../../core/router/store/router.selectors";
-
+import { Component, OnInit } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
+import { Subject } from "rxjs";
+import { filter, takeUntil } from "rxjs/operators";
 @Component({
   selector: "nf-tabs",
   template: `
     <ion-tabs mode="ios" >
-      <ion-tab-bar slot="bottom" *ngIf="showTabs">
+      <ion-tab-bar slot="bottom" [ngClass]="{'hide': !showTabs, 'show': showTabs}">
         <ion-tab-button tab="info">
           <ion-icon name="information-outline"></ion-icon>
           <ion-label>Info</ion-label>
@@ -40,18 +39,39 @@ import { getRouter } from "../../core/router/store/router.selectors";
       ion-tab-button {
         --color-selected: white;
       }
+
+      .hide{
+        display: none;
+      }
+
+      .show{
+        display: flex;
+      }
     `,
   ],
 })
-export class TabsComponent {
-  
-  public showTabs: boolean = true;
+export class TabsComponent implements OnInit {
 
-  constructor(private store: Store<AppState>) {
-    this.store.pipe(select(getRouter)).subscribe(val => {
-      if(val?.state.url === '/tabs/workouts/level') this.showTabs = false;
-      else if(val?.state.url === '/tabs/workouts/card-trainer') this.showTabs = false;
-      else this.showTabs = true;
-    })
+  closed$ = new Subject<any>();
+  showTabs = true; 
+
+  constructor(private _router: Router) { }
+
+  public ngOnInit(): void  {
+    this._router.events.pipe(
+      filter(e => e instanceof NavigationEnd),
+      takeUntil(this.closed$)
+    ).subscribe(event => {
+      if (event['url'] === '/tabs/workouts/level' || event['url'] === '/tabs/workouts/card-trainer') {
+        this.showTabs = false;
+      } else {
+        this.showTabs = true;
+      }
+    });
   }
+  
+  public ngOnDestroy(): void {
+    this.closed$.next();
+  }
+  
 }

@@ -2,7 +2,13 @@
 .container {
   height: 100%;
   width: 100%;
-  background: url(../../../../../assets/img/workout.jpg) no-repeat center center / cover;
+  background: black;
+  // background: url(../../../../../assets/img/workout.jpg) no-repeat center center / cover;
+}
+
+.container-logo {
+  text-align: center;
+  padding: 5vh 0 0;
 }
 
 .logo {
@@ -12,10 +18,22 @@
   //   5px 5px 10px #ccc;
 }
 
+.container-card {
+  border: 2px solid #585858;
+  padding: 2vh 0;
+  margin: 0 1.5vh;
+  border-radius: 10px;
+  /* background: linear-gradient(to right, #ff99cc, #45b6fe); */
+  /* filter: blur(1px); */
+  background: #101010;
+}
+
 ion-card   { 
   height: 15vh;
-  border-radius: 25px;
+  margin: 3vh 2.5vh;
+  border: 1px solid #585858;
   background: transparent;
+  border-radius: 25px;
   font-family: 'Lato';
 
   h2 {

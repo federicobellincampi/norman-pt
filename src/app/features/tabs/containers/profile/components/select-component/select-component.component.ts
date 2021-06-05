@@ -39,7 +39,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
       }
 
       ion-item {
-        --background: #474747;
+        --background: #424242;
         --color: white;
         --border-style: 0;
         --min-height: 8vh;
@@ -59,10 +59,6 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
         font-family: "Lato";
         font-weight: 400;
       }
-
-      /* ion-select::part(icon) {
-        display: none;
-      } */
 
       .custom-interface-man {
         color: #45b6fe;

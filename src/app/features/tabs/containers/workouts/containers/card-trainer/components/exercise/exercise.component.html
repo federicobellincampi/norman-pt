@@ -3,19 +3,33 @@
 
     <div class="vertical-center">
 
-      <iframe 
-        [src]='safeURL'     
-        frameborder="0" 
-        playsinline="0"
-        allowfullscreen="0"
-        ></iframe>
+      <div *ngIf="!videoLoaded" class="vertical-center" style="height: 20vh;">
+        <ion-spinner name="lines" color="primary"></ion-spinner>
+      </div>
+
+        <iframe
+          (load)="this.videoLoaded = true;"
+          [src]='safeURL'     
+          frameborder="0" 
+          playsinline="0"
+          allowfullscreen="0"
+        >
+      </iframe>
+
 
     </div>
 
-
-    <ion-card-content>
+    <ion-card-content *ngIf="videoLoaded">
       <h2>{{name}}</h2>
       <p>{{reps}}</p>
     </ion-card-content>
 
 </ion-card>
+
+<!-- <ng-template #skeleton>
+  <ion-card style="height: 30vh;">
+    <ion-skeleton-text animated style="height: 30vh;">
+
+    </ion-skeleton-text>
+  </ion-card>
+</ng-template> -->

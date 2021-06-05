@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { ExerciseModel } from '../../../../../../models/muscle-group';
 import { AppState } from '../../../../../../core/core.module';
 import { getExercieses } from '../../../../../tabs/containers/workouts/store/selectors/exercises.selectors';
-import { getLevelSelected } from '../../store/selectors/muscle-group.selectors';
+import { getLevelSelected, getMuscleGroupSelected } from '../../store/selectors/muscle-group.selectors';
 import * as ExercisesActions from '../../../../../tabs/containers/workouts/store/actions/exercises.action';
 import * as RouterActions from '../../../../../../core/router/store/router.actions';
 
@@ -17,6 +17,7 @@ export class CardTrainerComponent {
 
   public getExercieses$: Observable<ExerciseModel[][]> = this.store.pipe(select(getExercieses));
   public getLevelSelected$: Observable<string> = this.store.pipe(select(getLevelSelected));
+  public getMuscleGroupSelected$: Observable<string> = this.store.pipe(select(getMuscleGroupSelected))
 
   constructor(private store: Store<AppState>) { 
     this.store.dispatch(ExercisesActions.loadExercises());

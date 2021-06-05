@@ -3,7 +3,7 @@ import { select, Store } from '@ngrx/store';
 import { AppState } from '../../../../core/core.module';
 import { getCardsTrainer } from './store/selectors/cards-training.selectors';
 import { MuscleGroupModel } from '../../../../models/muscle-group';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import * as CardsTrainingActions from './store/actions/cards-training.actions';
 import * as MuscleGroupActions from './store/actions/muscle-group.actions';
 // import { AdmobService } from '../../../../core/services/admob.service';

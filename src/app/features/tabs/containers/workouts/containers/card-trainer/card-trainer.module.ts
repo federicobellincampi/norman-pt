@@ -6,7 +6,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 import { ExerciseComponent } from './components/exercise/exercise.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
-
 @NgModule({
   declarations: [
     CardTrainerComponent,

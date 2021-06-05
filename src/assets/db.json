@@ -3,7 +3,7 @@
     "donna": {
       "perderepeso": [
         {
-          "imgUrl": "https://firebasestorage.googleapis.com/v0/b/norman-pt.appspot.com/o/donna%2Fimg%2Fhit1-tonificazione.jpeg?alt=media&token=5f059c0f-f046-4f41-ace6-fc8a59a833f1",
+          "imgUrl": "",
           "livello": {
             "difficile": "Ripetere per 5 volte",
             "facile": "Ripetere per 3 volte",
@@ -14,12 +14,12 @@
               {
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
-                "urlVideo": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2FWhatsApp%20Video%202021-03-27%20at%2020.26.35.mp4?alt=media&token=ff6b3a03-2fb0-4d69-a28f-5b85346c4e14"
+                "urlVideo": "https://www.youtube.com/embed/NeufyzJPSM4"
               },
               {
                 "nome": "Piegamenti ginocchia poggiate",
                 "ripetizioni": "10 Ripetizioni",
-                "urlVideo": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2FWhatsApp%20Video%202021-03-27%20at%2020.26.46.mp4?alt=media&token=11b79bc0-b678-40fd-b841-7a970e62c862"
+                "urlVideo": "https://www.youtube.com/embed/rqinp0k-MI8"
               },
               {
                 "nome": "Addominali",
@@ -27,11 +27,13 @@
               },
               {
                 "nome": "Squats",
-                "ripetizioni": "15 Ripetizioni"
+                "ripetizioni": "15 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
                 "nome": "Jumping jacks",
-                "ripetizioni": "30 Ripetizioni"
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/NeufyzJPSM4"
               },
               {
                 "nome": "Addominali",
@@ -39,39 +41,44 @@
               },
               {
                 "nome": "Squats",
-                "ripetizioni": "15 Ripetizioni"
+                "ripetizioni": "15 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
                 "nome": "Plank",
-                "ripetizioni": "45 Secondi"
+                "ripetizioni": "45 Secondi",
+                "urlVideo": "https://www.youtube.com/embed/0-J62P4sRxM"
               }
             ],
             "livello2": [
               {
-                "nome": "Corsa sul posto",
+                "nome": "Corsa sul posto ginocchia alte",
                 "ripetizioni": "30 Secondi",
-                "urlVideo": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2FWhatsApp%20Video%202021-03-27%20at%2020.26.35.mp4?alt=media&token=ff6b3a03-2fb0-4d69-a28f-5b85346c4e14"
+                "urlVideo": "https://www.youtube.com/embed/-h-0YyIlKtk"
               },
               {
-                "nome": "Affondi totali",
+                "nome": "Affondi sul posto",
                 "ripetizioni": "20 Ripetizioni",
-                "urlVideo": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2FWhatsApp%20Video%202021-03-27%20at%2020.26.46.mp4?alt=media&token=11b79bc0-b678-40fd-b841-7a970e62c862"
+                "urlVideo": "https://www.youtube.com/embed/mbSRAgHkKtY"
               },
               {
                 "nome": "Addominali",
                 "ripetizioni": "30 Ripetizioni"
               },
               {
-                "nome": "Corsa sul posto",
-                "ripetizioni": "30 Secondi"
+                "nome": "Corsa sul posto ginocchia alte",
+                "ripetizioni": "30 Secondi",
+                "urlVideo": "https://www.youtube.com/embed/-h-0YyIlKtk"
               },
               {
                 "nome": "Squats",
-                "ripetizioni": "15 Ripetizioni"
+                "ripetizioni": "15 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
                 "nome": "Addominali obligui",
-                "ripetizioni": "30 Ripetizioni"
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/9UwwAZouKbE"
               },
               {
                 "nome": "Burpees",
@@ -79,7 +86,8 @@
               },
               {
                 "nome": "Plank",
-                "ripetizioni": "45 Secondi"
+                "ripetizioni": "45 Secondi",
+                "urlVideo": "https://www.youtube.com/embed/0-J62P4sRxM"
               }
             ],
             "livello3": [
@@ -91,27 +99,32 @@
               {
                 "nome": "Squats",
                 "ripetizioni": "20 Ripetizioni",
-                "urlVideo": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2FWhatsApp%20Video%202021-03-27%20at%2020.26.46.mp4?alt=media&token=11b79bc0-b678-40fd-b841-7a970e62c862"
+                "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
                 "nome": "Plank",
-                "ripetizioni": "30 Secondi"
+                "ripetizioni": "30 Secondi",
+                "urlVideo": "https://www.youtube.com/embed/0-J62P4sRxM"
               },
               {
-                "nome": "Affondi",
-                "ripetizioni": "20 Ripetizioni"
+                "nome": "Affondi sul posto",
+                "ripetizioni": "20 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/mbSRAgHkKtY"
               },
               {
-                "nome": "Corsa sul posto",
-                "ripetizioni": "30 Secondi"
+                "nome": "Corsa sul posto ginocchia alte",
+                "ripetizioni": "30 Secondi",
+                "urlVideo": "https://www.youtube.com/embed/-h-0YyIlKtk"
               },
               {
                 "nome": "Jumping jacks",
-                "ripetizioni": "30 Ripetizioni"
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/NeufyzJPSM4"
               },
               {
                 "nome": "Plank",
-                "ripetizioni": "1 minuto"
+                "ripetizioni": "1 minuto",
+                "urlVideo": "https://www.youtube.com/embed/0-J62P4sRxM"
               },
               {
                 "nome": "Candle ABS",
@@ -124,7 +137,7 @@
       ],
       "tonificarsi": [
         {
-          "imgUrl": "https://firebasestorage.googleapis.com/v0/b/norman-pt.appspot.com/o/donna%2Fimg%2Fglutei-addome-tonificazione.jpeg?alt=media&token=50b2f76a-7bc3-4be7-87b5-2a0ddc80fcb8",
+          "imgUrl": "",
           "livello": {
             "difficile": "Ripetere per 5 volte",
             "facile": "Ripetere per 3 volte",
@@ -135,12 +148,12 @@
               {
                 "nome": "Slanci quadrupedia gamba tesa",
                 "ripetizioni": "30 Ripetizioni",
-                "urlVideo": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2FWhatsApp%20Video%202021-03-27%20at%2020.26.35.mp4?alt=media&token=ff6b3a03-2fb0-4d69-a28f-5b85346c4e14"
+                "urlVideo": "https://www.youtube.com/embed/OiCukUVnJn8"
               },
               {
                 "nome": "Squats",
                 "ripetizioni": "20 Ripetizioni",
-                "urlVideo": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2FWhatsApp%20Video%202021-03-27%20at%2020.26.46.mp4?alt=media&token=11b79bc0-b678-40fd-b841-7a970e62c862"
+                "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
                 "nome": "Addominali",
@@ -151,16 +164,19 @@
                 "ripetizioni": "30 Ripetizioni"
               },
               {
-                "nome": "Sforbiciate da sdraiate",
-                "ripetizioni": "30 Ripetizioni"
+                "nome": "Sforbiciate da posizione supina",
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/EqIUL_h_Dd8"
               },
               {
-                "nome": "Sollevamento bacino 1 gamba",
-                "ripetizioni": "20 Ripetizioni"
+                "nome": "Sollevamento bacino",
+                "ripetizioni": "20 Ripetizioni",
+                "urlVideo":"https://www.youtube.com/embed/alCz2gFlWeM"
               },
               {
                 "nome": "Addominali obligui",
-                "ripetizioni": "30 Ripetizioni"
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/9UwwAZouKbE"
               },
               {
                 "nome": "Slanci laterali su di un fianco",
@@ -171,7 +187,7 @@
           "titolo": "Glutei e addome"
         },
         {
-          "imgUrl": "https://firebasestorage.googleapis.com/v0/b/norman-pt.appspot.com/o/donna%2Fimg%2Fhit1-tonificazione.jpeg?alt=media&token=5f059c0f-f046-4f41-ace6-fc8a59a833f1",
+          "imgUrl": "",
           "livello": {
             "difficile": "Ripetere per 5 volte",
             "facile": "Ripetere per 3 volte",
@@ -182,20 +198,22 @@
               {
                 "nome": "Squats",
                 "ripetizioni": "20 Ripetizioni",
-                "urlVideo": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2FWhatsApp%20Video%202021-03-27%20at%2020.26.35.mp4?alt=media&token=ff6b3a03-2fb0-4d69-a28f-5b85346c4e14"
+                "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
                 "nome": "Shoulder touches",
                 "ripetizioni": "30 Ripetizioni",
-                "urlVideo": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2FWhatsApp%20Video%202021-03-27%20at%2020.26.46.mp4?alt=media&token=11b79bc0-b678-40fd-b841-7a970e62c862"
+                "urlVideo": "https://www.youtube.com/embed/aV-jfKImiqc"
               },
               {
-                "nome": "Affondi",
-                "ripetizioni": "10 Ripetizioni"
+                "nome": "Affondi sul posto",
+                "ripetizioni": "10 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/mbSRAgHkKtY"
               },
               {
                 "nome": "Jumping jacks",
-                "ripetizioni": "30 Ripetizioni"
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/NeufyzJPSM4"
               },
               {
                 "nome": "Camminata in avanti con le mani",
@@ -206,8 +224,9 @@
                 "ripetizioni": "1 Minuto"
               },
               {
-                "nome": "Affondi",
-                "ripetizioni": "20 Ripetizioni"
+                "nome": "Affondi sul posto",
+                "ripetizioni": "20 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/mbSRAgHkKtY"
               }
             ]
           },
@@ -218,7 +237,7 @@
     "uomo": {
       "massamuscolare": [
         {
-          "imgUrl": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2Fimg%2Fgambe.jpg?alt=media&token=4f4dc99f-f413-4f9f-a5f7-144183fd2a96",
+          "imgUrl": "./assets/img/uomo-petto.jpg",
           "livello": {
             "difficile": "Ripetere per 5 volte",
             "facile": "Ripetere per 3 volte",
@@ -250,7 +269,7 @@
           "titolo": "Gambe e addome"
         },
         {
-          "imgUrl": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2Fimg%2Fuomo-petto.jpg?alt=media&token=36dbc084-50e0-4004-94b3-dbbb88a35a87",
+          "imgUrl": "./assets/img/uomo-petto.jpg",
           "livello": {
             "difficile": "Ripetere per 5 volte",
             "facile": "Ripetere per 3 volte",
@@ -261,32 +280,37 @@
               {
                 "nome": "Piegamenti",
                 "ripetizioni": "10 Ripetizioni",
-                "urlVideo": "https://www.youtube.com/embed/K2i5u7wTVj0"
+                "urlVideo": "https://www.youtube.com/embed/EUO-MkX7pjA"
               },
               {
                 "nome": "Piegamenti braccia strette",
                 "ripetizioni": "10 Ripetizioni",
-                "urlVideo": ""
+                "urlVideo": "https://www.youtube.com/embed/N516WXp5N2U"
               },
               {
                 "nome": "Shoulder touches",
-                "ripetizioni": "30 Ripetizioni"
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/sCunjVdGv78"
               },
               {
                 "nome": "Plank",
-                "ripetizioni": "40 Secondi"
+                "ripetizioni": "40 Secondi",
+                "urlVideo": ""
               },
               {
                 "nome": "Camminata in avanti con le mani",
-                "ripetizioni": "10 Ripetizioni"
+                "ripetizioni": "10 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/NqY4OAL28Po"
               },
               {
                 "nome": "Plank dinamico",
-                "ripetizioni": "30 Secondi"
+                "ripetizioni": "30 Secondi",
+                "urlVideo": "https://www.youtube.com/embed/UEmMxAtEJpM"
               },
               {
-                "nome": "Tricipiti con la sedia",
-                "ripetizioni": "15 Ripetizioni"
+                "nome": "Tricipiti corpo libero (sedia)",
+                "ripetizioni": "15 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/X1Ybved_d0E"
               }
             ],
             "livello2": [
@@ -296,15 +320,18 @@
               },
               {
                 "nome": "Piegamenti",
-                "ripetizioni": "15 Ripetizioni"
+                "ripetizioni": "15 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/EUO-MkX7pjA"
               },
               {
                 "nome": "Plank",
-                "ripetizioni": "45 Secondi"
+                "ripetizioni": "45 Secondi",
+                "urlVideo": ""
               },
               {
                 "nome": "Burpees",
-                "ripetizioni": "8 Ripetizioni"
+                "ripetizioni": "8 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/G-5XepKm15w"
               },
               {
                 "nome": "Addominali obligui",
@@ -312,15 +339,18 @@
               },
               {
                 "nome": "Piegamenti spiderman",
-                "ripetizioni": "10 Ripetizioni"
+                "ripetizioni": "10 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/bVs2fN_eHXg"
               },
               {
                 "nome": "Plank dinamico",
-                "ripetizioni": "40 Secondi"
+                "ripetizioni": "40 Secondi",
+                "urlVideo": "https://www.youtube.com/embed/UEmMxAtEJpM"
               },
               {
-                "nome": "Tricipiti con la sedia",
-                "ripetizioni": "15 Ripetizioni"
+                "nome": "Tricipiti corpo libero (sedia)",
+                "ripetizioni": "15 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/X1Ybved_d0E"
               }
             ]
           },
@@ -329,7 +359,7 @@
       ],
       "perderepeso": [
         {
-          "imgUrl": "https://firebasestorage.googleapis.com/v0/b/app-norman-pt.appspot.com/o/uomo%2Fimg%2Fgambe.jpg?alt=media&token=4f4dc99f-f413-4f9f-a5f7-144183fd2a96",
+          "imgUrl": "",
           "livello": {
             "difficile": "Ripetere per 5 volte",
             "facile": "Ripetere per 3 volte",
@@ -340,7 +370,7 @@
               {
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
-                "urlVideo": "..."
+                "urlVideo": "wafAbQGnBcw"
               },
               {
                 "nome": "Addominali",
@@ -350,12 +380,12 @@
               {
                 "nome": "Squats",
                 "ripetizioni": "20 Ripetizioni",
-                "urlVideo": "..."
+                "urlVideo": "NTdTNVFnEzU"
               },
               {
-                "nome": "Corsa ginocchia alte",
+                "nome": "Corsa al posto ginocchia alte",
                 "ripetizioni": "30 secondi",
-                "urlVideo": "..."
+                "urlVideo": "rfb363sJXdU"
               },
               {
                 "nome": "Roll up",
@@ -363,26 +393,26 @@
                 "urlVideo": "..."
               },
               {
-                "nome": "Corsa ginocchia alte",
+                "nome": "Corsa al posto ginocchia alte",
                 "ripetizioni": "30 Secondi",
-                "urlVideo": "..."
+                "urlVideo": "rfb363sJXdU"
               },
               {
                 "nome": "Russian twist",
                 "ripetizioni": "30 Ripetizioni",
-                "urlVideo": "..."
+                "urlVideo": "DZlaoo2ahto"
               },
               {
                 "nome": "Piegamenti",
                 "ripetizioni": "10 Ripetizioni",
-                "urlVideo": "..."
+                "urlVideo": "EUO-MkX7pjA"
               }
             ],
             "livello2": [
               {
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
-                "urlVideo": "..."
+                "urlVideo": "https://www.youtube.com/embed/wafAbQGnBcw"
               },
               {
                 "nome": "Addominali obligui",
@@ -392,36 +422,36 @@
               {
                 "nome": "Burpees",
                 "ripetizioni": "10 Ripetizioni",
-                "urlVideo": "..."
+                "urlVideo": "https://www.youtube.com/embed/G-5XepKm15w"
               },
               {
                 "nome": "Piegamenti",
                 "ripetizioni": "10 Ripetizioni",
-                "urlVideo": "..."
+                "urlVideo": "https://www.youtube.com/embed/EUO-MkX7pjA"
               },
               {
-                "nome": "Corsa sul posto",
+                "nome": "Corsa sul posto ginocchia alte",
                 "ripetizioni": "30 Secondi",
-                "urlVideo": "..."
+                "urlVideo": "https://www.youtube.com/embed/rfb363sJXdU"
               },
               {
                 "nome": "Plank",
                 "ripetizioni": "1 Minuto",
-                "urlVideo": "..."
+                "urlVideo": ""
               },
               {
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
-                "urlVideo": "..."
+                "urlVideo": "https://www.youtube.com/embed/wafAbQGnBcw"
               },
               {
                 "nome": "Plank",
                 "ripetizioni": "30 Secondi",
-                "urlVideo": "..."
+                "urlVideo": ""
               }
             ]
           },
-          "titolo": "Gambe e addome"
+          "titolo": "Hit 1"
         }
       ]
     }

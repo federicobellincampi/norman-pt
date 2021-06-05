@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserGuard } from './core/services/user.guard';
-import { LevelGuard } from './features/tabs/containers/workouts/services/level.guard';
-import { MuscleGroupGuard } from './features/tabs/containers/workouts/services/muscle-group.guard';
 
 const routes: Routes = [
   {
