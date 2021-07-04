@@ -1,13 +1,12 @@
-<header [style.background]="'url(' + (getImgUrl$ | async) + ')'">
-  <div class="toolbar">
-    <ion-label class="toolbar-title">
-     <div style="margin-left: 1.5vh;"> 
-       <ion-icon name="chevron-back-outline" (click)="backButtonHandler()"></ion-icon> 
-      </div> 
-      <h2 >{{getMuscleGroupSelected$ | async}}</h2>
-    </ion-label>
-  </div>
-</header>
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="backButtonHandler()">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </ion-buttons>
+    <h2>{{ getMuscleGroupSelected$ | async }}</h2>
+  </ion-toolbar>
+</ion-header>
+
 
 <ion-content *ngIf="getLevels$ | async as levels">
 

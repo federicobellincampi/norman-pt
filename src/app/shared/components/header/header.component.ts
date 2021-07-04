@@ -27,6 +27,10 @@ import * as RouterActions from '../../../core/router/store/router.actions';
         --color: white;
       }
 
+      ion-title {
+        font-size: 2.5vh;
+      }
+
       ion-header {
         --border-color: transparent;
       }

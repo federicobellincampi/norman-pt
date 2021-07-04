@@ -3,69 +3,58 @@
   height: 100%;
   width: 100%;
   background: black;
-  // background: url(../../../../../assets/img/workout.jpg) no-repeat center center / cover;
 }
 
-.container-logo {
-  text-align: center;
-  padding: 5vh 0 0;
-}
+ion-toolbar {
+  --background: #f55f20;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.logo {
-  height: 20vh;
-  // box-shadow: 
-  //   inset 5px 5px 10px #ccc,
-  //   5px 5px 10px #ccc;
-}
-
-.container-card {
-  border: 2px solid #585858;
-  padding: 2vh 0;
-  margin: 0 1.5vh;
-  border-radius: 10px;
-  /* background: linear-gradient(to right, #ff99cc, #45b6fe); */
-  /* filter: blur(1px); */
-  background: #101010;
-}
-
-ion-card   { 
-  height: 15vh;
-  margin: 3vh 2.5vh;
-  border: 1px solid #585858;
-  background: transparent;
-  border-radius: 25px;
-  font-family: 'Lato';
-
-  h2 {
-    position: absolute;
-    top: 0;
+  div {
+    text-align: center;
+    padding: 0 4vh;
+    font-size: 3vh;
     color: white;
-    font-weight: 400;
-    margin: 3vh 3vh 2vh;;
-    font-size: 2.5vh;
+    font-weight: 600;
   }
 }
 
-.card-container {
-  backdrop-filter: blur(50px);
-  padding: 1.6vh 0;
-  margin: 0 1.6vh;
-  border-radius: 20px;
+.logo-half-page {
+  background-image: url('../../../../../assets/img/logo.png');
+  background-position: 66%;
+  background-size: cover;
+  height: 100%;
+  width: 50%;
 }
 
+.container-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-25%, -50%);
+  width: 100%;
 
-h2 {
-  color: white;
-  font-weight: 400;
-  margin: 2vh;
-  font-size: 2.5vh;
-  text-align: center;
+  ion-card   { 
+    height: 10vh;
+    margin: 3vh 0 3vh 2.5vh;
+    font-family: "Lato";
+    width: 70%;
+    background: #f55f20;
+    border-radius: 0;
+    border-top-left-radius: 2vh;
+    border-bottom-left-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      color: white;
+      font-weight: 400;
+      margin: 0;
+      font-size: 3vh;
+      text-align: center;
+    }
 }
 
-ion-skeleton-text {
-  --background-rgb: 255,255,255;
 }
-
-// ion-skeleton-text {
-//   –-background-rgb: 230,40,50
-// }

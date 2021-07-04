@@ -1,56 +1,22 @@
-<!-- <nf-header title="Allenamenti"></nf-header> -->
+<ion-header class="ion-no-border" mode="ios">
+    <ion-toolbar>
+        <div>SELEZIONA IL TUO ALLENAMENTO</div>
+    </ion-toolbar>
+</ion-header>
 
 <div class="container" *ngIf="getCardsTrainer$ | async as cards">
-    
-    <div class="container-logo">
-        <img class="logo" src="./assets/img/logo-trainer.svg" alt="">
-    </div>
 
+    <div class="logo-half-page"></div>
 
     <div class="container-card">
-        <h2>Seleziona il tuo allenamento</h2>  
-        <ion-card  *ngFor="let card of cards; first as isFirst" button="true" mode="ios"
-                (click)="navToLevel(card.titolo, card.imgUrl)"
-                [class.first]="isFirst"
-            >
-            <img [src]="card.imgUrl" >
-            <h2>{{card.titolo}}</h2> 
 
+        <ion-card #card *ngFor="let card of cards; first as isFirst" button="true" mode="ios"
+            (click)="navToLevel(card.titolo, card.imgUrl)">
+            <h2>{{card.titolo}}</h2>
         </ion-card>
+
     </div>
 
-   
-
-    
 </div>
-
-<!-- <ng-template #skeleton>
-    <div class="container">
-        <div style="text-align: center;">
-            <img class="logo" src="./assets/img/logo-trainer.svg" alt="">
-        </div>
-        <div class="card-container">
-            <h2>Seleziona cosa vuoi allenare</h2> 
-    
-            <div>
-                <ion-card>
-                    <ion-skeleton-text animated style="height: 15vh"></ion-skeleton-text>
-                </ion-card>
-                <ion-card>
-                    <ion-skeleton-text animated style="height: 15vh"></ion-skeleton-text>
-                </ion-card>
-            </div>
-        </div>
-    </div>
-
-
-    <div>
-        <ion-skeleton-text animated style="height: 100%"></ion-skeleton-text>
-    </div>
-</ng-template> -->
-
-<!-- <ion-button color="primary" (click)="Interstitial()">INTERSTITAL</ion-button>
-  
-<ion-button color="secondary" (click)="Reward()">REWARDVIDEO</ion-button> -->
 
 <router-outlet></router-outlet>

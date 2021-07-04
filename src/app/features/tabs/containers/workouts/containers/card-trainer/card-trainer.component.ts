@@ -18,6 +18,7 @@ export class CardTrainerComponent {
   public getExercieses$: Observable<ExerciseModel[][]> = this.store.pipe(select(getExercieses));
   public getLevelSelected$: Observable<string> = this.store.pipe(select(getLevelSelected));
   public getMuscleGroupSelected$: Observable<string> = this.store.pipe(select(getMuscleGroupSelected))
+  public openModal: boolean = false;
 
   constructor(private store: Store<AppState>) { 
     this.store.dispatch(ExercisesActions.loadExercises());

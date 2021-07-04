@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { AppState } from '../../../../core/core.module';
 import { getCardsTrainer } from './store/selectors/cards-training.selectors';
@@ -16,7 +16,6 @@ import * as MuscleGroupActions from './store/actions/muscle-group.actions';
 export class WorkoutsComponent {
 
   public getCardsTrainer$: Observable<MuscleGroupModel[]> = this.store.pipe(select(getCardsTrainer))
-  safeURL: any;
 
   constructor(
     private store: Store<AppState>, 
@@ -25,6 +24,9 @@ export class WorkoutsComponent {
      this.store.dispatch(CardsTrainingActions.loadCardsTraining())
   }
 
+  public ionViewWillEnter(): void { 
+  }
+ 
   ngOnInit() {
     //LOAD THE BANNER AT PAGE INIT
     //this.admobService.ShowBanner();

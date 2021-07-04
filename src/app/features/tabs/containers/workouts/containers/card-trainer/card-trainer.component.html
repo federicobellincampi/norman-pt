@@ -7,15 +7,32 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <div>
-  <nf-info-card></nf-info-card>
-</div> -->
-
 <ion-content *ngIf="getExercieses$ | async as exercieses">
 
-  <nf-info-card></nf-info-card>
+  <!-- Scheda -->
+  <div class="container-scheda">
 
- <h2>
+    <ion-buttons (click)="openModal = !openModal">
+      Info
+      <ion-icon name="information-circle-outline"></ion-icon>
+    </ion-buttons>
+
+    <div class="title">
+      <h2>
+        Scheda
+      </h2>
+    </div>
+
+    <ul>
+      <li *ngFor="let exerciese of exercieses[0]"> {{exerciese.nome}} - {{exerciese.ripetizioni}}</li>
+    </ul>
+  </div>
+
+  <!-- Modale Info -->
+  <nf-info-card *ngIf="openModal" ($closeModal)="openModal = $event"></nf-info-card>
+
+  <!-- Video esercizi -->
+  <h2>
     Esercizi
   </h2>
 
@@ -24,3 +41,4 @@
   </nf-exercise>
 
 </ion-content>
+

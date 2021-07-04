@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { TabsComponent } from './tabs.component';
 import { TabsPageRoutingModule } from './tabs-routing.module';
+import { enterAnimation } from '../../animations/nav-animation';
 
 @NgModule({
   declarations: [TabsComponent],
   imports: [
-    IonicModule,
     CommonModule,
-    TabsPageRoutingModule
+    IonicModule.forRoot({
+      navAnimation: enterAnimation,
+      swipeBackEnabled: true
+    }), 
+    TabsPageRoutingModule,
   ],
 })
 export class TabsModule { }

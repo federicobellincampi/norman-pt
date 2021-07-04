@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
+import { HttpClientModule } from '@angular/common/http';
 
 /* Modules */
 import { SharedModule } from '../../../../shared/shared.module';
@@ -19,22 +20,14 @@ import { ExercisesEffects } from './store/effects/exercises.effects';
 /* Services */
 import { GetCardsTrainingService } from './services/get-cards-training.service';
 
-/* Firestore */
-// import { AngularFireModule } from '@angular/fire';
-// import { AngularFireStorageModule } from '@angular/fire/storage';
-// import { environment } from "../../../../../environments/environment";
-
 /* Components */
 import { WorkoutsComponent } from './workouts.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     IonicModule,
     SharedModule,
-    // AngularFireModule.initializeApp(environment.firebase),
-    // AngularFireStorageModule,
     workoutsRoutingModule,
     HttpClientModule,
     StoreModule.forFeature('workouts', reducers),
@@ -51,7 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     WorkoutsComponent,
   ],
   providers: [
-    GetCardsTrainingService
-  ]
+    GetCardsTrainingService,
+    ]
 })
 export class TrainersModule {}

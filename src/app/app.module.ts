@@ -18,9 +18,9 @@ import { enterAnimation } from './animations/nav-animation';
   entryComponents: [],
   imports: [
     BrowserModule, 
-    IonicModule.forRoot(),
     IonicModule.forRoot({
       navAnimation: enterAnimation,
+      swipeBackEnabled: true
     }), 
     AppRoutingModule,
     CoreModule

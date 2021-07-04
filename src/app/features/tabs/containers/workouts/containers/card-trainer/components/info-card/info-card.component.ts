@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'nf-info-card',
@@ -6,12 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./info-card.component.scss'],
 })
 export class InfoCardComponent {
-
-  public open: boolean = true;
-
-  public openInfo(): void {
-    this.open = !this.open;
-  }
-
-
+  @Output() public $closeModal: EventEmitter<boolean> = new EventEmitter();
 }

@@ -26,7 +26,7 @@ import { Platform } from "@ionic/angular";
       }
 
       ion-label {
-        color: white;
+        font-size: 2.5vh !important;
       }
 
       ion-item {

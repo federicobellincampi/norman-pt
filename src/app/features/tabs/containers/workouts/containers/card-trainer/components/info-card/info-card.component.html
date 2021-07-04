@@ -1,33 +1,18 @@
-<div>
-
-  <div>
-    <h2>Come eseguire la scheda</h2>
-
-    <span>
-      Questo circuito deve essere eseguito <strong> senza recupero tra un eserecizio e l'altro.</strong><br>
-      Se dovesse risultare troppo difficile inserire un recupero di <strong>massimo 20"</strong> tra un esercizio e
-      l'altro.
-    </span>
+<div class="blur" (click)="$closeModal.emit(false)"></div>
+<div class="modal">
+  <div style="display: flex;">
+    <h2>
+      Info
+    </h2>
+    <ion-buttons (click)="$closeModal.emit(false)">
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
   </div>
 
-  <div style="margin-bottom: 1vh;">
-    <h2>Difficoltà scheda</h2>
-
-    <ul>
-      <li>
-        <span><strong>Facile:</strong> Ripetere il circuito per 3 volte.</span>
-      </li>
-      <li>
-        <span><strong>Medio:</strong> Ripetere il circuito per 4 volte.</span>
-      </li>
-      <li>
-        <span><strong>Difficile:</strong> Ripetere il circuito per 5 volte.</span>
-      </li>
-    </ul>
-  </div>
-  
   <span>
-    Alla fine del circuito recupere 2/3 minuti prima di ripeterlo.
+    Eseguire il circuito dalle 3 alle 5 volte<strong> senza recupero tra un eserecizio e l'altro. </strong>
+    <br>
+    <br>
+    Alla fine del circuito recuperare 2/3 minuti prima di ripeterlo.
   </span>
-
 </div>
