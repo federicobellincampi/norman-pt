@@ -10,7 +10,6 @@ import { enterAnimation } from '../../animations/nav-animation';
   imports: [
     CommonModule,
     IonicModule.forRoot({
-      navAnimation: enterAnimation,
       swipeBackEnabled: true
     }), 
     TabsPageRoutingModule,

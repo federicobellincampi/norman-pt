@@ -12,41 +12,49 @@
           "schede": {
             "livello1": [
               {
+                "id": 1,
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/NeufyzJPSM4"
               },
               {
+                "id": 2,
                 "nome": "Piegamenti ginocchia poggiate",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/rqinp0k-MI8"
               },
               {
+                "id": 3,
                 "nome": "Addominali sit up",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/TWEJkn1iFBs"
               },
               {
+                "id": 4,
                 "nome": "Squats",
                 "ripetizioni": "15 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
+                "id": 5,
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/NeufyzJPSM4"
               },
               {
+                "id": 6,
                 "nome": "Addominali sit up",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/TWEJkn1iFBs"
               },
               {
+                "id": 7,
                 "nome": "Squats",
                 "ripetizioni": "15 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
+                "id": 8,
                 "nome": "Plank",
                 "ripetizioni": "45 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/0-J62P4sRxM"
@@ -54,41 +62,49 @@
             ],
             "livello2": [
               {
+                "id": 1,
                 "nome": "Corsa sul posto ginocchia alte",
                 "ripetizioni": "30 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/-h-0YyIlKtk"
               },
               {
+                "id": 2,
                 "nome": "Affondi sul posto",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/mbSRAgHkKtY"
               },
               {
+                "id": 3,
                 "nome": "Addominali sit up",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/TWEJkn1iFBs"
               },
               {
+                "id": 4,
                 "nome": "Corsa sul posto ginocchia alte",
                 "ripetizioni": "30 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/-h-0YyIlKtk"
               },
               {
+                "id": 5,
                 "nome": "Squats",
                 "ripetizioni": "15 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
+                "id": 6,
                 "nome": "Addominali obliqui",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/GHIf4vh2qI8"
               },
               {
+                "id": 7,
                 "nome": "Basic burpees",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/MFRV3Q3GCe0"
               },
               {
+                "id": 8,
                 "nome": "Plank",
                 "ripetizioni": "45 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/0-J62P4sRxM"
@@ -96,41 +112,49 @@
             ],
             "livello3": [
               {
+                "id": 1,
                 "nome": "Basic burpees",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/MFRV3Q3GCe0"
               },
               {
+                "id": 2,
                 "nome": "Squats",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
+                "id": 3,
                 "nome": "Plank",
                 "ripetizioni": "30 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/0-J62P4sRxM"
               },
               {
+                "id": 4,
                 "nome": "Affondi sul posto",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/mbSRAgHkKtY"
               },
               {
+                "id": 5,
                 "nome": "Corsa sul posto ginocchia alte",
                 "ripetizioni": "30 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/-h-0YyIlKtk"
               },
               {
+                "id": 6,
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/NeufyzJPSM4"
               },
               {
+                "id": 7,
                 "nome": "Plank",
                 "ripetizioni": "1 minuto",
                 "urlVideo": "https://www.youtube.com/embed/0-J62P4sRxM"
               },
               {
+                "id": 8,
                 "nome": "Addominali sit up",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/TWEJkn1iFBs"
@@ -151,41 +175,103 @@
           "schede": {
             "livello1": [
               {
+                "id": 1,
                 "nome": "Slanci quadrupedia gamba tesa",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/OiCukUVnJn8"
               },
               {
+                "id": 2,
                 "nome": "Squats",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
-                "nome": "Addominali",
-                "ripetizioni": "1 Minuto"
+                "id": 3,
+                "nome": "Addominali sit up",
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/TWEJkn1iFBs"
               },
               {
-                "nome": "Slanci laterali",
-                "ripetizioni": "30 Ripetizioni"
+                "id": 4,
+                "nome": "Slanci gamba tesa",
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/OiCukUVnJn8"
+
               },
               {
+                "id": 5,
                 "nome": "Sforbiciate da posizione supina",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/EqIUL_h_Dd8"
               },
               {
+                "id": 6,
                 "nome": "Sollevamento bacino",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/alCz2gFlWeM"
               },
               {
+                "id": 7,
                 "nome": "Addominali obligui",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/9UwwAZouKbE"
               },
               {
-                "nome": "Slanci laterali su di un fianco",
-                "ripetizioni": "30 Ripetizioni"
+                "id": 8,
+                "nome": "Slanci gamba tesa",
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/OiCukUVnJn8"
+              }
+            ],
+            "livello2": [
+              {
+                "id": 1,
+                "nome": "Addominali obligui",
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/9UwwAZouKbE"
+              },
+              {
+                "id": 2,
+                "nome": "Sollevamento bacino",
+                "ripetizioni": "20 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/alCz2gFlWeM"
+              },
+              {
+                "id": 3,
+                "nome": "Squats",
+                "ripetizioni": "20 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
+              },
+              {
+                "id": 4,
+                "nome": "Squats jump",
+                "ripetizioni": "15 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/E6iHZZSYDr8"
+              },
+              {
+                "id": 5,
+                "nome": "Plank",
+                "ripetizioni": "45 Secondi",
+                "urlVideo": "https://www.youtube.com/embed/0-J62P4sRxM"
+              },
+              {
+                "id": 6,
+                "nome": "Affondi sul posto",
+                "ripetizioni": "20 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/mbSRAgHkKtY"
+              },
+              {
+                "id": 7,
+                "nome": "Sollevamento bacino",
+                "ripetizioni": "50 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/alCz2gFlWeM"
+              },
+              {
+                "id": 8,
+                "nome": "Russian twist",
+                "ripetizioni": "40 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/-dmd5JLP0rU"
               }
             ]
           },
@@ -201,39 +287,90 @@
           "schede": {
             "livello1": [
               {
+                "id": 1,
                 "nome": "Squats",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
               },
               {
+                "id": 2,
                 "nome": "Shoulder touches",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/aV-jfKImiqc"
               },
               {
+                "id": 3,
                 "nome": "Affondi sul posto",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/mbSRAgHkKtY"
               },
               {
+                "id": 4,
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/NeufyzJPSM4"
               },
               {
+                "id": 5,
                 "nome": "Camminata in avanti con le mani",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/XucCp95oBzE"
               },
               {
+                "id": 6,
                 "nome": "Plank dinamico",
                 "ripetizioni": "1 Minuto",
                 "urlVideo": "https://www.youtube.com/embed/gJnHx6eIyMY"
               },
               {
+                "id": 7,
                 "nome": "Affondi sul posto",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/mbSRAgHkKtY"
+              }
+            ],
+            "livello2": [
+              {
+                "id": 1,
+                "nome": "Jumping jacks",
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/NeufyzJPSM4"
+              },
+              {
+                "id": 2,
+                "nome": "Addominali sit up",
+                "ripetizioni": "30 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/TWEJkn1iFBs"
+              },
+              {
+                "id": 3,
+                "nome": "Squats jump",
+                "ripetizioni": "15 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/E6iHZZSYDr8"
+              },
+              {
+                "id": 4,
+                "nome": "Squats",
+                "ripetizioni": "20 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/aDhoG-f8TV4"
+              },
+              {
+                "id": 5,
+                "nome": "Roll up",
+                "ripetizioni": "15 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/iQHoZXOvbCw"
+              },
+              {
+                "id": 6,
+                "nome": "Basic burpees",
+                "ripetizioni": "10 Ripetizioni",
+                "urlVideo": "https://www.youtube.com/embed/MFRV3Q3GCe0"
+              },
+              {
+                "id": 7,
+                "nome": "Plank",
+                "ripetizioni": "45 Secondi",
+                "urlVideo": "https://www.youtube.com/embed/0-J62P4sRxM"
               }
             ]
           },
@@ -253,36 +390,43 @@
           "schede": {
             "livello1": [
               {
+                "id": 1,
                 "nome": "Squat",
                 "ripetizioni": "15 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/NTdTNVFnEzU"
               },
               {
+                "id": 2,
                 "nome": "Affondi",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/agBQ9AWd6OA"
               },
               {
+                "id": 3,
                 "nome": "Addominali sit up",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/3Yg0AaHqG14"
               },
               {
+                "id": 4,
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/iTAUPKsGss8"
               },
               {
+                "id": 5,
                 "nome": "Burpees",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/d4KYcoma-9Y"
               },
               {
+                "id": 6,
                 "nome": "Plank",
                 "ripetizioni": "45 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/Ry6eq9c7hG8"
               },
               {
+                "id": 7,
                 "nome": "Candle ABS",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/VNH8VksgyFI"
@@ -290,36 +434,43 @@
             ],
             "livello2": [
               {
+                "id": 1,
                 "nome": "Squat",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/NTdTNVFnEzU"
               },
               {
+                "id": 2,
                 "nome": "Squat jump",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/"
               },
               {
+                "id": 3,
                 "nome": "Jumping jacks",
                 "ripetizioni": "40 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/iTAUPKsGss8"
               },
               {
+                "id": 4,
                 "nome": "Candle ABS",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/VNH8VksgyFI"
               },
               {
+                "id": 5,
                 "nome": "Plank alto",
                 "ripetizioni": "30 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/If2VzQwPsGQ"
               },
               {
+                "id": 6,
                 "nome": "Wall sit",
                 "ripetizioni": "40 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/JS7mxforZJA"
               },
               {
+                "id": 7,
                 "nome": "Addominali sit up",
                 "ripetizioni": "40 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/3Yg0AaHqG14"
@@ -327,41 +478,49 @@
             ],
             "livello3": [
               {
+                "id": 1,
                 "nome": "Step up con sedia",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/idYs-zcQxXQ"
               },
               {
+                "id": 2,
                 "nome": "Burpees",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/d4KYcoma-9Y"
               },
               {
+                "id": 3,
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/iTAUPKsGss8"
               },
               {
+                "id": 4,
                 "nome": "Affondi",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/agBQ9AWd6OA"
               },
               {
+                "id": 5,
                 "nome": "Squat",
                 "ripetizioni": "15 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/NTdTNVFnEzU"
               },
               {
+                "id": 6,
                 "nome": "Basic burpees",
                 "ripetizioni": "8 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/NFAQIlf3fjc"
               },
               {
+                "id": 7,
                 "nome": "Addominali sit up",
                 "ripetizioni": "50 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/3Yg0AaHqG14"
               },
               {
+                "id": 8,
                 "nome": "Plank",
                 "ripetizioni": "1 minuto",
                 "urlVideo": "https://www.youtube.com/embed/Ry6eq9c7hG8"
@@ -380,36 +539,43 @@
           "schede": {
             "livello1": [
               {
+                "id": 1,
                 "nome": "Piegamenti",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/EUO-MkX7pjA"
               },
               {
+                "id": 2,
                 "nome": "Piegamenti braccia strette",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/N516WXp5N2U"
               },
               {
+                "id": 3,
                 "nome": "Shoulder touches",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/sCunjVdGv78"
               },
               {
+                "id": 4,
                 "nome": "Plank",
                 "ripetizioni": "40 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/Ry6eq9c7hG8"
               },
               {
+                "id": 5,
                 "nome": "Camminata in avanti con le mani",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/NqY4OAL28Po"
               },
               {
+                "id": 6,
                 "nome": "Plank dinamico",
                 "ripetizioni": "30 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/UEmMxAtEJpM"
               },
               {
+                "id": 7,
                 "nome": "Tricipiti corpo libero (sedia)",
                 "ripetizioni": "15 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/X1Ybved_d0E"
@@ -417,41 +583,49 @@
             ],
             "livello2": [
               {
+                "id": 1,
                 "nome": "Camminate + Climbers",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo":"https://www.youtube.com/embed/ACid1py0NZs"
               },
               {
+                "id": 2,
                 "nome": "Piegamenti",
                 "ripetizioni": "15 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/EUO-MkX7pjA"
               },
               {
+                "id": 3,
                 "nome": "Plank",
                 "ripetizioni": "45 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/Ry6eq9c7hG8"
               },
               {
+                "id": 4,
                 "nome": "Burpees",
                 "ripetizioni": "8 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/G-5XepKm15w"
               },
               {
+                "id": 5,
                 "nome": "Addominali sit up",
                 "ripetizioni": "40 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/3Yg0AaHqG14"
               },
               {
+                "id": 6,
                 "nome": "Piegamenti spiderman",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/bVs2fN_eHXg"
               },
               {
+                "id": 7,
                 "nome": "Plank dinamico",
                 "ripetizioni": "40 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/UEmMxAtEJpM"
               },
               {
+                "id": 8,
                 "nome": "Tricipiti corpo libero (sedia)",
                 "ripetizioni": "15 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/X1Ybved_d0E"
@@ -472,41 +646,49 @@
           "schede": {
             "livello1": [
               {
+                "id": 1,
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/iTAUPKsGss8"
               },
               {
+                "id": 2,
                 "nome": "Addominali sit up",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/3Yg0AaHqG14"
               },
               {
+                "id": 3,
                 "nome": "Squats",
                 "ripetizioni": "20 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/NTdTNVFnEzU"
               },
               {
+                "id": 4,
                 "nome": "Corsa al posto ginocchia alte",
                 "ripetizioni": "30 secondi",
                 "urlVideo": "https://www.youtube.com/embed/rfb363sJXdU"
               },
               {
+                "id": 5,
                 "nome": "Roll up gambe tese",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/PwREFwndkm0"
               },
               {
+                "id": 6,
                 "nome": "Corsa al posto ginocchia alte",
                 "ripetizioni": "30 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/rfb363sJXdU"
               },
               {
+                "id": 7,
                 "nome": "Russian twist",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/DZlaoo2ahto"
               },
               {
+                "id": 8,
                 "nome": "Piegamenti",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/EUO-MkX7pjA"
@@ -514,41 +696,49 @@
             ],
             "livello2": [
               {
+                "id": 1,
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/wafAbQGnBcw"
               },
               {
+                "id": 2,
                 "nome": "Addominali sit up",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/3Yg0AaHqG14"
               },
               {
+                "id": 3,
                 "nome": "Burpees",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/G-5XepKm15w"
               },
               {
+                "id": 4,
                 "nome": "Piegamenti",
                 "ripetizioni": "10 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/EUO-MkX7pjA"
               },
               {
+                "id": 5,
                 "nome": "Corsa sul posto ginocchia alte",
                 "ripetizioni": "30 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/rfb363sJXdU"
               },
               {
+                "id": 6,
                 "nome": "Plank",
                 "ripetizioni": "1 Minuto",
                 "urlVideo": "https://www.youtube.com/embed/Ry6eq9c7hG8"
               },
               {
+                "id": 7,
                 "nome": "Jumping jacks",
                 "ripetizioni": "30 Ripetizioni",
                 "urlVideo": "https://www.youtube.com/embed/wafAbQGnBcw"
               },
               {
+                "id": 8,
                 "nome": "Plank",
                 "ripetizioni": "30 Secondi",
                 "urlVideo": "https://www.youtube.com/embed/Ry6eq9c7hG8"

@@ -28,7 +28,7 @@ export class LevelComponent {
   }
 
   public backButtonHandler(): void {
-    this.store.dispatch(RouterActions.back())
+    this.store.dispatch(RouterActions.go({ path: ['tabs/workouts']} ))
   }
 
 }

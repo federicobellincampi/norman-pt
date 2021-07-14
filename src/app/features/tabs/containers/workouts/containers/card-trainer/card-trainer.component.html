@@ -24,7 +24,7 @@
     </div>
 
     <ul>
-      <li *ngFor="let exerciese of exercieses[0]"> {{exerciese.nome}} - {{exerciese.ripetizioni}}</li>
+      <li *ngFor="let exerciese of exercieses[0]" (click)="scrollTo(exerciese.id)"> {{exerciese.nome}} - {{exerciese.ripetizioni}}</li>
     </ul>
   </div>
 
@@ -36,9 +36,11 @@
     Esercizi
   </h2>
 
-  <nf-exercise *ngFor="let exerciese of exercieses[0]" [urlVideo]="exerciese.urlVideo" [name]="exerciese.nome"
-    [reps]="exerciese.ripetizioni">
-  </nf-exercise>
+  <div *ngFor="let exerciese of exercieses[0]; let i = index">
+    <nf-exercise id="{{i + 1}}"  [urlVideo]="exerciese.urlVideo" [name]="exerciese.nome"
+      [reps]="exerciese.ripetizioni">
+    </nf-exercise>
+  </div>
 
 </ion-content>
 

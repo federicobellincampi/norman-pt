@@ -11,6 +11,7 @@ import { LevelNumberComponent } from './components/level-number/level-number.com
     CommonModule,
     SharedModule,
     IonicModule,
+    
     RouterModule.forChild([
       {
         path: '',

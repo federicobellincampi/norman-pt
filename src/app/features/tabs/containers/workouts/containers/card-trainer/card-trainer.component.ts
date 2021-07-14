@@ -28,4 +28,12 @@ export class CardTrainerComponent {
     this.store.dispatch(RouterActions.back())
   }
 
+  public scrollTo(id: number): void {
+    const itemToScrollTo = document.getElementById(id.toString());
+    
+    if (itemToScrollTo) {
+      itemToScrollTo.scrollIntoView(true);
+    }
+  }
+
 }

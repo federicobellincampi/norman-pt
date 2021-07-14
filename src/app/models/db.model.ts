@@ -35,6 +35,7 @@ export interface LevelModel {
 }
 
 export interface ExerciseModel {
+    id?: number;
     nome: string;
     ripetizioni: string | number;
     urlVideo: string;
