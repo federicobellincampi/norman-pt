@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardTrainerComponent } from './card-trainer.component';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 import { ExerciseComponent } from './components/exercise/exercise.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
@@ -14,7 +13,6 @@ import { InfoCardComponent } from './components/info-card/info-card.component';
   ],
   imports: [
     CommonModule,
-    SharedModule,
     IonicModule,
     RouterModule.forChild([
       {

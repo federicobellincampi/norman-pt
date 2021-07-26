@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { enterAnimation } from './animations/nav-animation';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,12 @@ import { enterAnimation } from './animations/nav-animation';
     }), 
     AppRoutingModule,
     CoreModule
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    ScreenOrientation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

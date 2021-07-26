@@ -5,7 +5,6 @@ import { IonicModule } from '@ionic/angular';
 import { HttpClientModule } from '@angular/common/http';
 
 /* Modules */
-import { SharedModule } from '../../../../shared/shared.module';
 import { workoutsRoutingModule } from './workouts-routing.module';
 
 /* Store */
@@ -27,7 +26,6 @@ import { WorkoutsComponent } from './workouts.component';
   imports: [
     CommonModule,
     IonicModule,
-    SharedModule,
     workoutsRoutingModule,
     HttpClientModule,
     StoreModule.forFeature('workouts', reducers),
